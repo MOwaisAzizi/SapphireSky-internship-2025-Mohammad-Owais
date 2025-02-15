@@ -18,8 +18,8 @@ function isOddOrEvenCheck(number){
     else if(number === 0) return `${number} is Zero!`
    }
     
-//    const input = prompt('Enter A Number')
-//    console.log(checkPositiveOrNegative(Number(input)));
+   const input = prompt('Enter A Number')
+   console.log(checkPositiveOrNegative(Number(input)));
 
 
 //6-Write a function that calculates the factorial of a given number.
