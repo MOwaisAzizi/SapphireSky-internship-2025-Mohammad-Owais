@@ -1,6 +1,6 @@
 ////pratical examples
 
-//Write a function to check if a number is even or odd.
+//2-Write a function to check if a number is even or odd.
 function isOddOrEvenCheck(number){
     if(number === 0) return `${number} is zero!`
     if(number % 2 === 0) return `${number} is even!`
@@ -11,7 +11,7 @@ function isOddOrEvenCheck(number){
  console.log(isOddOrEvenCheck(120));
  console.log(isOddOrEvenCheck(0));
  
- //Write a program that takes user input and prints whether it is a positive, negative, or zero.
+ //4-Write a program that takes user input and prints whether it is a positive, negative, or zero.
  function checkPositiveOrNegative(number){
     if(number>0) return `${number} is a positive number!`
     else if(number<0) return `${number} is a negative number!`
@@ -22,3 +22,13 @@ function isOddOrEvenCheck(number){
    console.log(checkPositiveOrNegative(Number(input)));
 
 
+//6-Write a function that calculates the factorial of a given number.
+   function checkFactorial(number){
+    let fac = 1
+    for (let i = 1; i <= number; i++) {
+       fac*=i        
+    }
+    return fac
+   }
+  console.log(checkFactorial(5));
+  
