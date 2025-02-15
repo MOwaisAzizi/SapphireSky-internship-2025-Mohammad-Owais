@@ -18,8 +18,8 @@ function isOddOrEvenCheck(number){
     else if(number === 0) return `${number} is Zero!`
    }
     
-   const input = prompt('Enter A Number')
-   console.log(checkPositiveOrNegative(Number(input)));
+//    const input = prompt('Enter A Number')
+//    console.log(checkPositiveOrNegative(Number(input)));
 
 
 //6-Write a function that calculates the factorial of a given number.
@@ -31,4 +31,14 @@ function isOddOrEvenCheck(number){
     return fac
    }
   console.log(checkFactorial(5));
+
+// 9-Write a function to find the sum of all numbers in an array.
+  function sumOfArray(arr){
+    let sum = 0
+    for (let i = 0; i<arr.length;i++){
+        sum += arr[i]
+    }
+    return sum
+  }
+  console.log(sumOfArray([2,3,4,5,6]));
   
