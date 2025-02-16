@@ -34,5 +34,16 @@ console.log(checkStudentGrade(60));
 console.log(checkStudentGrade(110));
 console.log(checkStudentGrade(-20));
 
+//Write a program that takes two numbers as input and prints the smaller number.
+const findSmaller = (num1,num2)=>{
+  if(num1 < num2) console.log(`${num1} is smaller then ${num2}`);
+  else if(num1 > num2) console.log(`${num2} is smaller then ${num1}`);
+  else console.log('Both numbers are the same');
+}
+findSmaller(29,39)
+findSmaller(22,4)
+findSmaller(5,5)
+
+
 
 
