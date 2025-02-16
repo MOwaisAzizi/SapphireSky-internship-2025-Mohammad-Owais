@@ -24,3 +24,11 @@ Example:
         console.log(`Hello ${this.name}`)
     }
  }
+
+ 8-Explain the concept of hoisting in JavaScript.
+ 
+ Hoisting in JavaScript means that you have access to variable that is not defined yet, but defined below of where you used the variable.
+ variables stored in var is hoisted and we get undefined but not an error.
+ variable stored in let and const is not hoisted and we get an error if we use them before initializing them.
+ regular functions are hoisted but not arrow functions.
+ 
