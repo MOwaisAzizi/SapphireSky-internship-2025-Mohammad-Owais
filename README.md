@@ -8,5 +8,19 @@ you can reassign it to another value if you want.
 var: is a global scope container for variables(if we use the same name variable for another var variable at the same file, we would get a syntext error). variables stored in these containers are accessible from anywhare and we can reassign variables that is stored in these containers.it is the most less used variable container.
 
 2-Explain the difference between == and === in JavaScript.
+
  == check if a value is equals to another value without checking their data types(that means by using == operator '20' is equals to 20).
  === check if a value is equals to another value with checking their data types(that means by using === operator '20' is not equals to 20).
+
+ 7-How does this keyword work in JavaScript? Provide an example.
+
+ this keyword have different meaning depending on where we use it and how?
+ this keyword in an object method points to current object,in arrow functions it is not definded so we will get in error,in regular methods it points to object window, in the body of our file(alone) also points to window objects and in an event handling function it points to HTML emelent that receive the event.
+
+Example:
+ const obj1 = {
+    name:'Ahmad'
+    callName:function(){
+        console.log(`Hello ${this.name}`)
+    }
+ }
