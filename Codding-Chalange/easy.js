@@ -1,6 +1,6 @@
 // Easy Questions
 
-//Write a program that takes a number as input and checks if it is odd or even.
+//1-Write a program that takes a number as input and checks if it is odd or even.
 function isOddOrEvenCheck(number){
     if(number === 0) return `${number} is zero!`
     else if(number % 2 === 0) return `${number} is even!`
@@ -12,7 +12,7 @@ console.log(isOddOrEvenCheck(120));
 console.log(isOddOrEvenCheck(0));
 
 
-//Given a student's score (0-100), determine their letter grade based on the following scale:
+//2-Given a student's score (0-100), determine their letter grade based on the following scale:
 // 90-100: A
 // 80-89: B
 // 70-79: C
@@ -34,7 +34,7 @@ console.log(checkStudentGrade(60));
 console.log(checkStudentGrade(110));
 console.log(checkStudentGrade(-20));
 
-//Write a program that takes two numbers as input and prints the smaller number.
+//3-Write a program that takes two numbers as input and prints the smaller number.
 const findSmaller = (num1,num2)=>{
   if(num1 < num2) console.log(`${num1} is smaller then ${num2}`);
   else if(num1 > num2) console.log(`${num2} is smaller then ${num1}`);
@@ -44,6 +44,13 @@ findSmaller(29,39)
 findSmaller(22,4)
 findSmaller(5,5)
 
-
-
+//4- A year is a leap year if it is divisible by 4 but not by 100, 
+// unless also divisible by 400. Write a program that determines if a given year is a leap year.
+const isLeapYear = year => {
+    if(year % 400 === 0 ) return true
+    else if(year % 4 === 0 && year % 100 !== 0) return true
+    else return false
+}
+console.log(isLeapYear(2000));
+console.log(isLeapYear(1900));
 
