@@ -35,12 +35,4 @@ console.log(checkStudentGrade(110));
 console.log(checkStudentGrade(-20));
 
 
-function outerFunction(outerVariable) {
-    return function innerFunction(innerVariable) {
-        console.log("Outer Variable: " + outerVariable);
-        console.log("Inner Variable: " + innerVariable);
-    };
-}
 
-const closure = outerFunction("I am from outer scope");
-closure("I am from inner scope");

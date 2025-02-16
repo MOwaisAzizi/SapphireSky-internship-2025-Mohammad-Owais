@@ -1,4 +1,4 @@
-Discriptive Questions
+Discriptive Questions in Basic Part 1
 
 1-What is the difference between var, let, and const in JavaSipcrt?
 
@@ -9,10 +9,23 @@ you can reassign it to another value if you want.
 
 var: is a global scope container for variables(if we use the same name variable for another var variable at the same file, we would get a syntext error). variables stored in these containers are accessible from anywhare and we can reassign variables that is stored in these containers.it is the most less used variable container.
 
-2-Explain the difference between == and === in JavaScript.
+3-Explain the difference between == and === in JavaScript.
 
  == check if a value is equals to another value without checking their data types(that means by using == operator '20' is equals to 20).
  === check if a value is equals to another value with checking their data types(that means by using === operator '20' is not equals to 20).
+
+ 5-What are JavaScript closures? Provide an example.
+
+A closure in JavaScript is a feature that allows a function to access variables from its outer  scope even after that scope has finished executing. in the following example the inner function has access to outvariable event after we called the outerfunction before.
+
+function outerFunction(outerVariable) {
+    return function innerFunction(innerVariable) {
+        console.log("Outer Variable: " + outerVariable);
+        console.log("Inner Variable: " + innerVariable);
+    };
+}
+const closure = outerFunction("Hi! I am from outer scope");
+closure("Hi! I am from inner scope");
 
  7-How does this keyword work in JavaScript? Provide an example.
 
@@ -35,16 +48,10 @@ Example:
  variable stored in let and const is not hoisted and we get an error if we use them before initializing them.
  regular functions are hoisted but not arrow functions.
 
-5-What are JavaScript closures? Provide an example.
+10-What are arrow functions in JavaScript, and how are they different from regular functions?
 
-A closure in JavaScript is a feature that allows a function to access variables from its outer  scope even after that scope has finished executing. in the following example the inner function has access to outvariable event after we called the outerfunction before.
-
-function outerFunction(outerVariable) {
-    return function innerFunction(innerVariable) {
-        console.log("Outer Variable: " + outerVariable);
-        console.log("Inner Variable: " + innerVariable);
-    };
-}
-const closure = outerFunction("Hi! I am from outer scope");
-closure("Hi! I am from inner scope");
-
+ arrow function is like a regular function but in shorter and simple syntax, is a piece of code that perform spacific actions or work.
+ but thay are different in syntax and have some limitations that make us to not user them in everywhare(for example we can not use this keyword in this kind of methods). arrow functions are used a lot these days because of thire simple and short syntax.
+ 
+ Example: const arrowFunction = val => val+10
+ 
