@@ -55,7 +55,7 @@ const BMICalculator = (weight, height) => {
     if (25 <= BMI < 30) return 'overweight'
     if( BMI > 30 ) return 'Obese'
 }
- console.log(BMICalculator(65,180));
+ console.log(BMICalculator(65,1.8));
  
 
 
