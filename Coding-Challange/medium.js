@@ -46,7 +46,6 @@ withdrawFromATM(100)
 // Normal weight: 18.5 ≤ BMI < 25
 // Overweight: 25 ≤ BMI < 30
 // Obese: BMI ≥ 30
-
 const BMICalculator = (weight, height) => {
     if(!weight || !height) return
 
@@ -57,8 +56,18 @@ const BMICalculator = (weight, height) => {
     else if (25 <= BMI < 30) return 'overweight'
     else if( BMI > 30 ) return 'Obese'
 }
+  // to meter
  console.log(BMICalculator(65,1.8));
  
+// 9-Electricity Bill Calculator
+// Units Consumed:
+// Up to 100 units: $0.50 per unit
+// 101 to 200 units: $0.75 per unit
+// 201 to 500 units: $1.20 per unit
+// Above 500 units: $1.50 per unit
+// Write a program that calculates the total electricity bill.
+
+
 
 
 
