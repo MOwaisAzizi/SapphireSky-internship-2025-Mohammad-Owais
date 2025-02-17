@@ -48,13 +48,14 @@ withdrawFromATM(100)
 // Obese: BMI ≥ 30
 
 const BMICalculator = (weight, height) => {
+    if(!weight || !height) return
+
     const BMI = weight / (height * height )
-    console.log(BMI);
     
     if (BMI < 18.5) return 'Underweight'
-    if (BMI > 18.5 && BMI < 25) return 'normal'
-    if (25 <= BMI < 30) return 'overweight'
-    if( BMI > 30 ) return 'Obese'
+    else if (BMI >= 18.5 && BMI < 25) return 'normal'
+    else if (25 <= BMI < 30) return 'overweight'
+    else if( BMI > 30 ) return 'Obese'
 }
  console.log(BMICalculator(65,1.8));
  
