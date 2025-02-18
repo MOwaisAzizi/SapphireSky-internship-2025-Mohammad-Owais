@@ -63,5 +63,23 @@ console.log(reverseNumber(123));
 
    console.log(isPrimeNumber(15));
    console.log(isPrimeNumber(29));
+   
+   //7- Factorial of a Number
+     function factorial(number){
+        let f = 1
+        for(let i = 1;i<=number;i++){
+            f *= i
+        }
+        return f
+     }
+      console.log(factorial(4));
+
+      //second solution
+    //   7- Factorial of a Number
+    function factorial2(number){
+        if(number ===0 || number === 1) return number
+         return number * factorial2(number-1)
+    } 
+   console.log(factorial2(4));
 
    
