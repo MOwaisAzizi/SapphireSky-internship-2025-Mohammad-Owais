@@ -37,7 +37,7 @@ function billCalculator(unit) {
 }
 console.log(billCalculator(300));
 
-//  Password Strength Checker
+// 10- Password Strength Checker
 // A strong password must:
 // Be at least 8 characters long.
 // Contain at least one uppercase letter, one lowercase letter, and one number.

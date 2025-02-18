@@ -15,10 +15,23 @@ function sumOfNumber(number) {
 }
 console.log(sumOfNumber(5));
 
-//Ask the user for a number and print its multiplication table up to 10.
+//3-Ask the user for a number and print its multiplication table up to 10.
 function MultiplicationTable(number) {
     for (let i = 1; i <= number; i++) {
-       console.log(`${i} x ${number} = ${i*number}`);
+        console.log(`${i} x ${number} = ${i * number}`);
     }
 }
 MultiplicationTable(10)
+
+//4-Reverse a Number
+function reverseNumber(number) {
+    const numToString = String(number)
+    let reverseNumber = ''
+
+    for (let i = numToString.length - 1; i >= 0; i--) {
+        reverseNumber += numToString[i]
+    }
+    return Number(reverseNumber)
+}
+
+console.log(reverseNumber(123));
