@@ -45,4 +45,23 @@ console.log(reverseNumber(123));
      return count
    }
    console.log(countDigit(3933333));
+
+
+   //Meduim part of loops questions
+   // 6-Check for Prime Number
+   function isPrimeNumber(number){
+    if(number < 2) return false
+    else if(number === 3 || number === 2) return true
+    else if(number % 3 === 0 || number % 2 === 0) return false
+
+    for(let i = 5; i<=Math.sqrt(number);i+=2){
+        if (number % i === 0) return false
+    }
+
+    return true
+   }
+
+   console.log(isPrimeNumber(15));
+   console.log(isPrimeNumber(29));
+
    
