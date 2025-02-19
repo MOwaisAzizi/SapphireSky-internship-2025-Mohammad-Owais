@@ -30,11 +30,11 @@ console.log(speedingTicketCalculator(12));
 //    If the account balance is less than the withdrawal amount, print "Insufficient Funds".
 function withdrawFromATM(withdrawAmount) {
     let balance = 1000
-    if (withdrawAmount % 10 === 0) {
+    if (withdrawAmount > balance) return 'Insufficient Funds'
+    else if (withdrawAmount % 10 === 0) {
         balance = balance - withdrawAmount
         console.log(`Your widthdraw was successfull ${withdrawAmount}! Your current balance is ${balance}`);
     }
-    else if (withdrawAmount % 10 !== 10) console.log('Failed: your withdraw amount is not dividible by 10');
-    else if (withdrawAmount > balance) console.log('Insufficient Funds');
+    else if (withdrawAmount % 10 !== 0) console.log('Failed: your withdraw amount is not dividible by 10');
 }
 withdrawFromATM(100)

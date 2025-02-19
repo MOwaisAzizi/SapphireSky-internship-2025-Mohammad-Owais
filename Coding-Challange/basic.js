@@ -1,15 +1,15 @@
 ////pratical examples
 
 //2-Write a function to check if a number is even or odd.
-function isOddOrEvenCheck(number) {
-   if (number === 0) return `${number} is zero!`
-   if (number % 2 === 0) return `${number} is even!`
-   else if (number % 2 !== 0) return `${number} is odd!`
+function isEvenCheck(number) {
+    if (number % 2 === 0) return true
+   else if (number % 2 !== 0) return false
+   else return `${number} is zero!`
 }
 
-console.log(isOddOrEvenCheck(17));
-console.log(isOddOrEvenCheck(120));
-console.log(isOddOrEvenCheck(0));
+console.log(isEvenCheck(17));
+console.log(isEvenCheck(120));
+console.log(isEvenCheck(0));
 
 //4-Write a program that takes user input and prints whether it is a positive, negative, or zero.
 function checkPositiveOrNegative(number) {

@@ -37,49 +37,51 @@ function reverseNumber(number) {
 console.log(reverseNumber(123));
 
 //5- Count Digits in a Number
-   function countDigit(number){
-    let count = 0;    
-     for(let i = 1; i <= String(number).length; i++){
-       count++
-     }
-     return count
-   }
-   console.log(countDigit(3933333));
+function countDigit(number) {
+    let count = 0;
+    for (let i = 1; i <= String(number).length; i++) {
+        count++
+    }
+    return count
+}
+console.log(countDigit(3933333));
 
 
-   //Meduim part of loops questions
-   // 6-Check for Prime Number
-   function isPrimeNumber(number){
-    if(number < 2) return false
-    else if(number === 3 || number === 2) return true
-    else if(number % 3 === 0 || number % 2 === 0) return false
+//Meduim part of loops questions
+// 6-Check for Prime Number
+function isPrimeNumber(number) {
+    if (number < 2) return false
+    else if (number === 3 || number === 2) return true
+    else if (number % 3 === 0 || number % 2 === 0) return false
 
-    for(let i = 5; i<=Math.sqrt(number);i+=2){
+    for (let i = 5; i <= Math.sqrt(number); i += 2) {
         if (number % i === 0) return false
     }
 
     return true
-   }
+}
 
-   console.log(isPrimeNumber(15));
-   console.log(isPrimeNumber(29));
-   
-   //7- Factorial of a Number
-     function factorial(number){
-        let f = 1
-        for(let i = 1;i<=number;i++){
-            f *= i
-        }
-        return f
-     }
-      console.log(factorial(4));
+console.log(isPrimeNumber(15));
+console.log(isPrimeNumber(29));
 
-      //second solution
-    //   7- Factorial of a Number
-    function factorial2(number){
-        if(number ===0 || number === 1) return number
-         return number * factorial2(number-1)
-    } 
-   console.log(factorial2(4));
+//7- Factorial of a Number
+function factorial(number) {
+    let f = 1
+    for (let i = 1; i <= number; i++) {
+        f *= i
+    }
+    return f
+}
+console.log(factorial(4));
 
-   
+//second solution
+//   7- Factorial of a Number
+function factorial2(number) {
+    if (number === 0 || number === 1) return number
+    return number * factorial2(number - 1)
+    //  number * (number-1) (number-2) (number-3)
+}
+console.log(factorial2(4));
+
+
+
