@@ -128,5 +128,29 @@ findSmallAndLargeNumber([2,3,4,5,1,4,33,1])
   }
   console.log(palindromeChecker(1221));
   console.log(palindromeChecker(12231));
+
+
+  //Armstrong Number  Example: 153 = (1³ + 5³ + 3³) = 153
+  function toPower(base,power){
+    sum = 1
+    for(let i = 1;i<= power;i++){
+        console.log('loging');
+        sum *= base
+    }
+    return sum
+  }
+   
+   function isArmstrongNumber(number){
+    let sum = 0
+     const numberToArray = String(number).split('')
+     const powerNumber = numberToArray.length
+     for(let i = 0;i<numberToArray.length;i++){
+       sum += toPower(Number(numberToArray[i]),powerNumber)
+     }
+     if(sum===number) return true
+     return false
+   }
+   console.log(isArmstrongNumber(153));
+   
   
 
