@@ -97,5 +97,19 @@ function findSmallAndLargeNumber(arr){
 }
 findSmallAndLargeNumber([2,3,4,5,1,4,33,1])
 
+//9-Fibonacci Sequence
+ function findFibonacci(number){
+    let temp= 0
+    let a = 0
+    let b = 1
+    for(let i = 1;i<number;i++){
+        temp = a + b
+        a = b
+        b = temp
 
+    }
+    return b
+ }
+ console.log(findFibonacci(5));
+ 
 
