@@ -1,6 +1,6 @@
 //1-Print Numbers from 1 to 100
 for (let i = 1; i <= 100; i++) {
-    console.log(i);
+    // console.log(i);
 }
 
 //2-Sum of First N Natural Numbers
@@ -13,7 +13,7 @@ function sumOfNumber(number) {
     ////or 
     // return ((number+1)*number)/2
 }
-console.log(sumOfNumber(5));
+// console.log(sumOfNumber(5));
 
 //3-Ask the user for a number and print its multiplication table up to 10.
 function MultiplicationTable(number) {
@@ -21,7 +21,7 @@ function MultiplicationTable(number) {
         console.log(`${i} x ${number} = ${i * number}`);
     }
 }
-MultiplicationTable(10)
+// MultiplicationTable(10)
 
 //4-Reverse a Number
 function reverseNumber(number) {
@@ -34,7 +34,7 @@ function reverseNumber(number) {
     return Number(reverseNumber)
 }
 
-console.log(reverseNumber(123));
+// console.log(reverseNumber(123));
 
 //5- Count Digits in a Number
 function countDigit(number) {
@@ -44,7 +44,7 @@ function countDigit(number) {
     }
     return count
 }
-console.log(countDigit(3933333));
+// console.log(countDigit(3933333));
 
 
 //Meduim part of loops questions
@@ -61,8 +61,8 @@ function isPrimeNumber(number) {
     return true
 }
 
-console.log(isPrimeNumber(15));
-console.log(isPrimeNumber(29));
+// console.log(isPrimeNumber(15));
+// console.log(isPrimeNumber(29));
 
 //7- Factorial of a Number
 function factorial(number) {
@@ -72,7 +72,7 @@ function factorial(number) {
     }
     return f
 }
-console.log(factorial(4));
+// console.log(factorial(4));
 
 //second solution
 //   7- Factorial of a Number
@@ -81,7 +81,21 @@ function factorial2(number) {
     return number * factorial2(number - 1)
     //  number * (number-1) (number-2) (number-3)
 }
-console.log(factorial2(4));
+// console.log(factorial2(4));
+
+//8-Find Largest and Smallest in a List
+function findSmallAndLargeNumber(arr){
+    let small = arr[0]
+    let large = arr[0]
+
+    for(let i = 0; i< arr.length;i++){
+        if(arr[i]>large) large = arr[i]
+        if(arr[i]<small) small = arr[i]
+    }
+    console.log(small,large);
+    
+}
+findSmallAndLargeNumber([2,3,4,5,1,4,33,1])
 
 
 
