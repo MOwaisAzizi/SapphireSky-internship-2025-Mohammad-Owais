@@ -84,73 +84,89 @@ function factorial2(number) {
 // console.log(factorial2(4));
 
 //8-Find Largest and Smallest in a List
-function findSmallAndLargeNumber(arr){
+function findSmallAndLargeNumber(arr) {
     let small = arr[0]
     let large = arr[0]
 
-    for(let i = 0; i< arr.length;i++){
-        if(arr[i]>large) large = arr[i]
-        if(arr[i]<small) small = arr[i]
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > large) large = arr[i]
+        if (arr[i] < small) small = arr[i]
     }
-    console.log(small,large);
-    
+    console.log(small, large);
+
 }
-findSmallAndLargeNumber([2,3,4,5,1,4,33,1])
+findSmallAndLargeNumber([2, 3, 4, 5, 1, 4, 33, 1])
 
 //9-Fibonacci Sequence
- function findFibonacci(number){
-    let temp= 0
+function findFibonacci(number) {
+    let temp = 0
     let a = 0
     let b = 1
-    for(let i = 1;i<number;i++){
+    for (let i = 1; i < number; i++) {
         temp = a + b
         a = b
         b = temp
     }
     return b
- }
- console.log(findFibonacci(5));
- 
-//10-Palindrome Checker
-  function palindromeChecker(number){
-    const numberToArray = String(number).split('')
-    let left = 0 
-    let right = numberToArray.length-1
+}
+console.log(findFibonacci(5));
 
-    while(right > left){
-        if(numberToArray[left] !== numberToArray[right]) {
-          return false
+//10-Palindrome Checker
+function palindromeChecker(number) {
+    const numberToArray = String(number).split('')
+    let left = 0
+    let right = numberToArray.length - 1
+
+    while (right > left) {
+        if (numberToArray[left] !== numberToArray[right]) {
+            return false
         }
         left++;
         right--;
     }
     return true
-  }
-  console.log(palindromeChecker(1221));
-  console.log(palindromeChecker(12231));
+}
+console.log(palindromeChecker(1221));
+console.log(palindromeChecker(12231));
 
 
-  //Armstrong Number  Example: 153 = (1³ + 5³ + 3³) = 153
-  function toPower(base,power){
+//11-Armstrong Number  Example: 153 = (1³ + 5³ + 3³) = 153
+function toPower(base, power) {
     sum = 1
-    for(let i = 1;i<= power;i++){
-        console.log('loging');
+    for (let i = 1; i <= power; i++) {
         sum *= base
     }
     return sum
-  }
-   
-   function isArmstrongNumber(number){
+}
+
+function isArmstrongNumber(number) {
     let sum = 0
-     const numberToArray = String(number).split('')
-     const powerNumber = numberToArray.length
-     for(let i = 0;i<numberToArray.length;i++){
-       sum += toPower(Number(numberToArray[i]),powerNumber)
-     }
-     if(sum===number) return true
-     return false
-   }
-   console.log(isArmstrongNumber(153));
-   
-  
+    const numberToArray = String(number).split('')
+    const powerNumber = numberToArray.length
+    for (let i = 0; i < numberToArray.length; i++) {
+        sum += toPower(Number(numberToArray[i]), powerNumber)
+    }
+    if (sum === number) return true
+    return false
+}
+console.log(isArmstrongNumber(153));
+
+//12-Collatz Sequence (Hailstone Numbers)
+function collatzSequence(number){
+    let steps = 0
+ while(number !== 1){
+    if(number % 2 === 0) {
+     number /= 2 
+     steps ++ 
+    }
+    else if(number % 2 !== 0){
+     number = (number * 2) + 1 
+     steps ++
+    }
+ }
+   return steps
+}
+console.log(collatzSequence(3));
+
+
 
