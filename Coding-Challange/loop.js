@@ -50,7 +50,7 @@ function countDigit(number) {
 //Meduim part of loops questions
 // 6-Check for Prime Number
 function isPrimeNumber(number) {
-    if (number < 2) return false
+    if (number < 2) return 'no false no true'
     else if (number === 3 || number === 2) return true
     else if (number % 3 === 0 || number % 2 === 0 || number % 5 ===0 || number % 7=== 0 || number % 11 === 0 ||number % 13 === 0 ) return false
     return true
@@ -60,6 +60,8 @@ function isPrimeNumber(number) {
 
 //7- Factorial of a Number
 function factorial(number) {
+    if(number === 0 || number === 1) return 1
+    
     let f = 1
     for (let i = 1; i <= number; i++) {
         f *= i
