@@ -152,34 +152,50 @@ function isArmstrongNumber(number) {
 console.log(isArmstrongNumber(153));
 
 //12-Collatz Sequence (Hailstone Numbers)
-function collatzSequence(number){
+function collatzSequence(number) {
     let steps = 0
- while(number !== 1){
-    if(number % 2 === 0) {
-     number /= 2 
-     steps ++ 
+    while (number !== 1) {
+        if (number % 2 === 0) {
+            number /= 2
+            steps++
+        }
+        else if (number % 2 !== 0) {
+            number = (number * 2) + 1
+            steps++
+        }
     }
-    else if(number % 2 !== 0){
-     number = (number * 2) + 1 
-     steps ++
-    }
- }
-   return steps
+    return steps
 }
 console.log(collatzSequence(3));
 
 //13-Find GCD (Greatest Common Divisor)
- function GCDChecker(a,b){
-    if(a<b) return 'first input must be biger then second'
+function GCDChecker(a, b) {
+    if (a < b) return 'first input must be biger then second'
 
-    while(b!==0){
+    while (b !== 0) {
         let temp = b
         b = a % b
         a = temp
     }
     return a
- }
- console.log(GCDChecker(60,72));
+}
+console.log(GCDChecker(60, 72));
 
- 
- 
+//14-Pattern Printing - Pyramid
+//    *  
+//   ***  
+//  *****  
+// *******  
+
+for (let i = 1; i < 5; i++) {
+    let starts = ''
+    for (let j = 1; j <= i; j++) {
+        if (i === 1 && j === 1) starts += '   '
+        if (i === 2 && j === 1) starts += '  '
+        if (i === 3 && j === 1) starts += ' '
+        i === j ? starts += '*' : starts += '**'
+    }
+    console.log(starts);
+}
+
+
