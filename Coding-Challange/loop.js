@@ -52,15 +52,9 @@ function countDigit(number) {
 function isPrimeNumber(number) {
     if (number < 2) return false
     else if (number === 3 || number === 2) return true
-    else if (number % 3 === 0 || number % 2 === 0) return false
-
-    for (let i = 5; i <= Math.sqrt(number); i += 2) {
-        if (number % i === 0) return false
-    }
-
+    else if (number % 3 === 0 || number % 2 === 0 || number % 5 ===0 || number % 7=== 0 || number % 11 === 0 ||number % 13 === 0 ) return false
     return true
 }
-
 // console.log(isPrimeNumber(15));
 // console.log(isPrimeNumber(29));
 
@@ -198,4 +192,20 @@ for (let i = 1; i < 5; i++) {
     console.log(starts);
 }
 
-
+//15. Number Guessing Game
+// - The program randomly selects a number between 1 and 100.
+// - The user must guess the number.
+// - The program gives hints like "Too High" or "Too Low".
+// - The loop continues until the user guesses correctly.
+ function GuessingGame(){
+    const randomNumber = Math.round((Math.random() * 100) + 1)
+    let number = 0
+    while(number !== randomNumber){
+    number = Number(prompt('Guess a number between 1-100'))
+    
+    if(number > randomNumber) console.log('to high. Guess Lower!');
+    else if(number < randomNumber) console.log('to Low. Guess Higher!');
+}
+    console.log(`Congrates 🎁. You Guessed Right : ${randomNumber}`);
+ }
+ GuessingGame()
