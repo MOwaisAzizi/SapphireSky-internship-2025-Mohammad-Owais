@@ -76,6 +76,19 @@ console.log(factorial(4));
         }
         return a
     }
-    console.log(GCDChecker(60, 72));
- 
+    console.log(findGCD(72, 60));
+
+    //9- Find the nth Fibonacci Number
+    function findFibonacci(number) {
+        let temp = 0
+        let a = 0
+        let b = 1
+        for (let i = 1; i < number; i++) {
+            temp = a + b
+            a = b
+            b = temp
+        }
+        return b
+    }
+    console.log(findFibonacci(5));
 
