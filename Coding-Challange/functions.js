@@ -29,7 +29,7 @@ function isEven(number) {
 function countVowels(str) {
     let count = 0
     const vowels = ['a', 'e', 'i', 'o', 'u']
-    
+
     vowels.forEach((el) => {
         for (let i = 0; i < str.length; i++) {
             if (str[i] === el.toUpperCase() || str[i] === el.toLowerCase()) count++
@@ -38,5 +38,16 @@ function countVowels(str) {
     return count
 }
 console.log(countVowels('hellow'));
+
+//5-Reverse a String
+ function reverseString(str){
+    let reverseStr = ''
+    for(let i = str.length-1; i>= 0; i--){
+    reverseStr += str[i]
+    }
+    return reverseStr
+ }
+ console.log(reverseString('Hello'));
+ 
 
 
