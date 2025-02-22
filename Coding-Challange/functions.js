@@ -18,3 +18,11 @@ console.log(celsiusToFahrenheit(5));
  }
  console.log(maxOfThree(4,5,4));
  
+ //3-Check Even or Odd
+function isEven(number) {
+    if(number === 0) return 'Zero!'
+    else if (number % 2 === 0) return true
+    else if (number % 2 !== 0) return false
+}
+
+//4-
