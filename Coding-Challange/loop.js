@@ -52,7 +52,7 @@ function countDigit(number) {
 function isPrimeNumber(number) {
     if (number < 2) return 'no false no true'
     else if (number === 3 || number === 2) return true
-    else if (number % 3 === 0 || number % 2 === 0 || number % 5 ===0 || number % 7=== 0 || number % 11 === 0 ||number % 13 === 0 ) return false
+    else if (number % 3 === 0 || number % 2 === 0 || number % 5 === 0 || number % 7 === 0 || number % 11 === 0 || number % 13 === 0) return false
     return true
 }
 // console.log(isPrimeNumber(15));
@@ -60,8 +60,8 @@ function isPrimeNumber(number) {
 
 //7- Factorial of a Number
 function factorial(number) {
-    if(number === 0 || number === 1) return 1
-    
+    if (number === 0 || number === 1) return 1
+
     let f = 1
     for (let i = 1; i <= number; i++) {
         f *= i
@@ -200,18 +200,18 @@ for (let i = 1; i < 5; i++) {
 // - The program gives hints like "Too High" or "Too Low".
 // - The loop continues until the user guesses correctly.
 
-   function GuessingGame(){
+function GuessingGame() {
     const randomNumber = Math.floor((Math.random() * 100) + 1)
     let number = 0
-    while(number !== randomNumber){
-    number = Number(prompt('Guess a number between 1-100'))
+    while (number !== randomNumber) {
+        number = Number(prompt('Guess a number between 1-100'))
 
-    if(isNaN(number)) console.log('Please enter a number!');
-    
-    if(number > randomNumber) console.log('to high. Guess Lower!');
-    else if(number < randomNumber) console.log('to Low. Guess Higher!');
+        if (isNaN(number)) console.log('Please enter a number!');
+
+        if (number > randomNumber) console.log('to high. Guess Lower!');
+        else if (number < randomNumber) console.log('to Low. Guess Higher!');
     }
     console.log(`Congrates 🎁. You Guessed Right : ${randomNumber}`);
-    }
-    // GuessingGame()
+}
+// GuessingGame()
 

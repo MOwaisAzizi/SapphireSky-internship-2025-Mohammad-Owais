@@ -40,30 +40,42 @@ function countVowels(str) {
 console.log(countVowels('hellow'));
 
 //5-Reverse a String
- function reverseString(str){
+function reverseString(str) {
     let reverseStr = ''
-    for(let i = str.length-1; i>= 0; i--){
-    reverseStr += str[i]
+    for (let i = str.length - 1; i >= 0; i--) {
+        reverseStr += str[i]
     }
     return reverseStr
- }
- console.log(reverseString('Hello'));
+}
+console.log(reverseString('Hello'));
 
- //6-Check if a Number is Prime
- function isPrimeNumber(number) {
+//6-Check if a Number is Prime
+function isPrimeNumber(number) {
     if (number < 2) return 'no true no false'
     else if (number === 3 || number === 2) return true
-    else if (number % 3 === 0 || number % 2 === 0 || number % 5 ===0 || number % 7=== 0 || number % 11 === 0 ||number % 13 === 0 ) return false
+    else if (number % 3 === 0 || number % 2 === 0 || number % 5 === 0 || number % 7 === 0 || number % 11 === 0 || number % 13 === 0) return false
     return true
 }
- 
- // 7- Calculate Factorial Using Recursion
-    function factorial(n){
-     if(n === 0 || n === 1) return 1
-     
-     return n * factorial(n-1)
-    }
-    console.log(factorial(4));
-    
 
+// 7- Calculate Factorial Using Recursion
+function factorial(n) {
+    if (n === 0 || n === 1) return 1
+
+    return n * factorial(n - 1)
+}
+console.log(factorial(4));
+
+//8-Find the GCD of Two Numbers
+    function findGCD(a, b) {
+        if (a < b) return 'first input must be biger then second'
+    
+        while (b !== 0) {
+            let temp = b
+            b = a % b
+            a = temp
+        }
+        return a
+    }
+    console.log(GCDChecker(60, 72));
+ 
 

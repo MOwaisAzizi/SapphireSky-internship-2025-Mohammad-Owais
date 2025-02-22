@@ -11,7 +11,6 @@ const BMICalculator = (weight, height) => {
     if (!weight || !height) return
 
     const BMI = weight / (height * height)
-
     if (BMI < 18.5) return 'Underweight'
     else if (BMI >= 18.5 && BMI < 25) return 'normal'
     else if (25 <= BMI < 30) return 'overweight'
@@ -48,6 +47,13 @@ function isvalidPassword(password) {
     return true
 }
 console.log(isvalidPassword('hellO12Hi'));
-console.log(isvalidPassword('helljdjdjd'));
-console.log(isvalidPassword('helljd3Djdjd'));
+
+
+
+
+
+
+
+
+
 
