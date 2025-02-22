@@ -94,18 +94,14 @@ function findSmallAndLargeNumber(arr) {
 findSmallAndLargeNumber([2, 3, 4, 5, 1, 4, 33, 1])
 
 //9-Fibonacci Sequence
-function findFibonacci(number) {
-    let temp = 0
-    let a = 0
-    let b = 1
-    for (let i = 1; i < number; i++) {
-        temp = a + b
-        a = b
-        b = temp
+function fibonacciSequence(n) {
+    let a = 0, b = 1;
+    for (let i = 0; i < n; i++) {
+        console.log(a); 
+        [a, b] = [b, a + b];
     }
-    return b
 }
-console.log(findFibonacci(5));
+console.log(fibonacciSequence(10));
 
 //10-Palindrome Checker
 function palindromeChecker(number) {

@@ -108,4 +108,4 @@ console.log(factorial(4));
         return true
     }
     
-    console.log(palindromeChecker('Hih'));
+    console.log(palindromeChecker('HiH'));
