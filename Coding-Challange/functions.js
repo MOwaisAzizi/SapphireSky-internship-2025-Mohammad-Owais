@@ -111,7 +111,7 @@ function palindromeChecker(str) {
 console.log(palindromeChecker('HiH'));
 
 
-//12-Generate Pascal’s Triangle
+//11-Generate Pascal’s Triangle
 //      1
 //     1 1
 //    1 2 1
@@ -133,7 +133,7 @@ function pascalsTriangle(numRows) {
 }
 pascalsTriangle(5);
 
-//13-Binary Search Algorithm
+//12-Binary Search Algorithm
 function binarySearch(arr, target) {
     let first = 0
     let last = arr.length - 1
@@ -148,7 +148,7 @@ function binarySearch(arr, target) {
 }
 console.log(binarySearch([1, 2, 3, 4, 5, 6, , 7, 8], 2));
 
-//14-Convert Decimal to Binary
+//13-Convert Decimal to Binary
 function decimalToBinary(n) {
     const arr = [];
     while (n > 0) {
@@ -159,6 +159,21 @@ function decimalToBinary(n) {
     arr.reverse();
     console.log(arr.join(''));
 }
-decimalToBinary(10);
-console.log(1 % 2);
+decimalToBinary(10)
+
+//14-Sorting an Array Using Bubble Sort
+function bubbleSort(arr) {
+    let temp
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] > arr[j + 1]) {
+                temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+            }
+        }
+    }
+    return arr
+}
+console.log(bubbleSort([8, 4, 5, 6, 1, 21, 1]));
 
