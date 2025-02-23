@@ -66,49 +66,49 @@ function factorial(n) {
 console.log(factorial(4));
 
 //8-Find the GCD of Two Numbers
-    function findGCD(a, b) {
-        if (a < b) return 'first input must be biger then second'
-    
-        while (b !== 0) {
-            let temp = b
-            b = a % b
-            a = temp
-        }
-        return a
-    }
-    console.log(findGCD(72, 60));
+function findGCD(a, b) {
+    if (a < b) return 'first input must be biger then second'
 
-    //9- Find the nth Fibonacci Number
-    function findFibonacci(number) {
-        let temp = 0
-        let a = 0
-        let b = 1
-        for (let i = 1; i < number; i++) {
-            temp = a + b
-            a = b
-            b = temp
-        }
-        return b
+    while (b !== 0) {
+        let temp = b
+        b = a % b
+        a = temp
     }
-    console.log(findFibonacci(5));
+    return a
+}
+console.log(findGCD(72, 60));
 
-    //10-Check if a String is a Palindrome
-    function palindromeChecker(str) {
-        const strArray = str.split('')
-        let left = 0
-        let right = strArray.length - 1
-    
-        while (right > left) {
-            if (strArray[left] !== strArray[right]) {
-                return false
-            }
-            left++;
-            right--;
-        }
-        return true
+//9- Find the nth Fibonacci Number
+function findFibonacci(number) {
+    let temp = 0
+    let a = 0
+    let b = 1
+    for (let i = 1; i < number; i++) {
+        temp = a + b
+        a = b
+        b = temp
     }
-    
-    console.log(palindromeChecker('HiH'));
+    return b
+}
+console.log(findFibonacci(5));
+
+//10-Check if a String is a Palindrome
+function palindromeChecker(str) {
+    const strArray = str.split('')
+    let left = 0
+    let right = strArray.length - 1
+
+    while (right > left) {
+        if (strArray[left] !== strArray[right]) {
+            return false
+        }
+        left++;
+        right--;
+    }
+    return true
+}
+
+console.log(palindromeChecker('HiH'));
 
 
 //12-Generate Pascal’s Triangle
@@ -118,32 +118,47 @@ console.log(factorial(4));
 //   1 3 3 1
 //  1 4 6 4 1
 
- function pascalsTriangle(numRows){
-        const triangle = [];
-        for (let row = 0; row < numRows; row++) {
-            const newRow = new Array(row + 1).fill(1);
+function pascalsTriangle(numRows) {
+    const triangle = [];
+    for (let row = 0; row < numRows; row++) {
+        const newRow = new Array(row + 1).fill(1);
 
-            for (let col = 1; col < row; col++) {
-                newRow[col] = triangle[row - 1][col - 1] + triangle[row - 1][col];
-            }
-            console.log(newRow.join(' '));
-            triangle.push(newRow);
+        for (let col = 1; col < row; col++) {
+            newRow[col] = triangle[row - 1][col - 1] + triangle[row - 1][col];
         }
-        return triangle
+        console.log(newRow.join(' '));
+        triangle.push(newRow);
     }
-    pascalsTriangle(5);
+    return triangle
+}
+pascalsTriangle(5);
 
 //13-Binary Search Algorithm
-function binarySearch(arr,target){
+function binarySearch(arr, target) {
     let first = 0
-    let last = arr.length-1
+    let last = arr.length - 1
     let mid
-    while(first <= last){
-     mid = Math.floor((first + last) / 2)
-     if(arr[mid] === target) return mid
-     else if(arr[mid] > target) last = mid-1
-     else if(arr[mid] < target) first = mid+1
+    while (first <= last) {
+        mid = Math.floor((first + last) / 2)
+        if (arr[mid] === target) return mid
+        else if (arr[mid] > target) last = mid - 1
+        else if (arr[mid] < target) first = mid + 1
     }
     return -1
 }
-console.log(binarySearch([1,2,3,4,5,6,,7,8],2));
+console.log(binarySearch([1, 2, 3, 4, 5, 6, , 7, 8], 2));
+
+//14-Convert Decimal to Binary
+function decimalToBinary(n) {
+    const arr = [];
+    while (n > 0) {
+        const binary = n % 2;
+        arr.push(binary);
+        n = Math.floor(n / 2);
+    }
+    arr.reverse();
+    console.log(arr.join(''));
+}
+decimalToBinary(10);
+console.log(1 % 2);
+
