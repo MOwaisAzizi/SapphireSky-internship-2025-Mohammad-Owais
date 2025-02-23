@@ -180,14 +180,14 @@ console.log(GCDChecker(60, 72));
 // *******  
 
 for (let i = 1; i < 5; i++) {
-    let starts = ''
+    let stars = ''
     for (let j = 1; j <= i; j++) {
-        if (i === 1 && j === 1) starts += '   '
-        if (i === 2 && j === 1) starts += '  '
-        if (i === 3 && j === 1) starts += ' '
-        i === j ? starts += '*' : starts += '**'
+        if (i === 1 && j === 1) stars += '   '
+        else if (i === 2 && j === 1) stars += '  '
+        else if (i === 3 && j === 1) stars += ' '
+        i === j ? stars += '*' : stars += '**'
     }
-    console.log(starts);
+    console.log(stars);
 }
 
 //15. Number Guessing Game
