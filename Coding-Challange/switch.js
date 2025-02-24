@@ -108,6 +108,7 @@ function gradeSystem(grade) {
 }
 console.log(gradeSystem(80));
 
+
 //7-Currency Converter
 // Take a currency code ("USD", "EUR", "INR", "JPY").
 // Use switch to print the conversion rate relative to a base currency (e.g., USD).
@@ -128,4 +129,34 @@ function currencyConverter(currency){
     return rate
 }
   console.log(currencyConverter('EUR'));
+
+
+  //8-Menu-Based ATM System
+// Display a menu with options:
+// 1 → Check Balance
+// 2 → Withdraw Money
+// 3 → Deposit Money
+// 4 → Exit
+// Use switch to perform the correct action based on the user’s choice.
+
+// function ATMSystem(){
+//     let option = ''
+
+//     switch (key) {
+//             case 1: option = 'Check Balance'
+//             break;
+//             case 2: option = 'Check Balance'
+//             break;
+            
+//             case 3: option = 'Check Balance'
+//             break;
+//             case 4: option = 'Check Balance'
+//             break;
+//             case 1: option = 'Check Balance'
+//             break;
+    
+//         default:
+//             break;
+//     }
+// }
  
