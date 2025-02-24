@@ -16,7 +16,7 @@ function sumOfNumber(number) {
 // console.log(sumOfNumber(5));
 
 //3-Ask the user for a number and print its multiplication table up to 10.
-function MultiplicationTable(number) {
+function multiplicationTable(number) {
     for (let i = 1; i <= number; i++) {
         console.log(`${i} x ${number} = ${i * number}`);
     }
@@ -162,7 +162,7 @@ console.log(collatzSequence(3));
 
 //13-Find GCD (Greatest Common Divisor)
 function GCDChecker(a, b) {
-    if (a < b) return 'first input must be biger then second'
+    if (a < b) [a,b] = [b,a]
 
     while (b !== 0) {
         let temp = b
