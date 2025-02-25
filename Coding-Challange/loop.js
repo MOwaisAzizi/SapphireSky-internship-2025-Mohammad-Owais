@@ -1,6 +1,6 @@
 //1-Print Numbers from 1 to 100
 for (let i = 1; i <= 100; i++) {
-    // console.log(i);
+    console.log(i);
 }
 
 //2-Sum of First N Natural Numbers
@@ -13,7 +13,7 @@ function sumOfNumber(number) {
     ////or 
     // return ((number+1)*number)/2
 }
-// console.log(sumOfNumber(5));
+ console.log(sumOfNumber(5));
 
 //3-Ask the user for a number and print its multiplication table up to 10.
 function multiplicationTable(number) {
@@ -55,7 +55,6 @@ function isPrimeNumber(number) {
     else if (number % 3 === 0 || number % 2 === 0 || number % 5 === 0 || number % 7 === 0 || number % 11 === 0 || number % 13 === 0) return false
     return true
 }
-// console.log(isPrimeNumber(15));
 // console.log(isPrimeNumber(29));
 
 //7- Factorial of a Number
@@ -88,10 +87,10 @@ function findSmallAndLargeNumber(arr) {
         if (arr[i] > large) large = arr[i]
         if (arr[i] < small) small = arr[i]
     }
-    console.log(small, large);
+    return [small,large]
 
 }
-findSmallAndLargeNumber([2, 3, 4, 5, 1, 4, 33, 1])
+console.log(findSmallAndLargeNumber([2, 3, 4, 5, 1, 4, 33, 1]))
 
 //9-Fibonacci Sequence
 function fibonacciSequence(n) {
