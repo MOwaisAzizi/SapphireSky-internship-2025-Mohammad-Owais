@@ -1,5 +1,3 @@
-
-
 //8-Body Mass Index (BMI) Calculator
 // Given weight (kg) and height (m), calculate BMI using BMI = weight / (height * height).
 // Categorize it into:
@@ -26,7 +24,6 @@ console.log(BMICalculator(65, 1.8));
 // 201 to 500 units: $1.20 per unit
 // Above 500 units: $1.50 per unit
 // Write a program that calculates the total electricity bill.
-
 function billCalculator(unit) {
     let bill = 0
     if (unit < 100) return bill = unit * 0.5
@@ -47,13 +44,3 @@ function isvalidPassword(password) {
     return true
 }
 console.log(isvalidPassword('hellO12Hi'));
-
-
-
-
-
-
-
-
-
-
