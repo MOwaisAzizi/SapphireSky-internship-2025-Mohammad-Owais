@@ -139,24 +139,20 @@ function currencyConverter(currency){
 // 4 → Exit
 // Use switch to perform the correct action based on the user’s choice.
 
-// function ATMSystem(){
-//     let option = ''
-
-//     switch (key) {
-//             case 1: option = 'Check Balance'
-//             break;
-//             case 2: option = 'Check Balance'
-//             break;
-            
-//             case 3: option = 'Check Balance'
-//             break;
-//             case 4: option = 'Check Balance'
-//             break;
-//             case 1: option = 'Check Balance'
-//             break;
-    
-//         default:
-//             break;
-//     }
-// }
- 
+function ATMSystem(key){
+    if(typeof key !== 'number') return 'Falid. We Expected a Number!'
+    let option = ''
+    switch (key) {
+            case 1: option = 'Check Balance'
+            break;
+            case 2: option = 'withdraw money'
+            break;
+            case 3: option = 'deposit money'
+            break;
+            case 4: option = 'exit'
+            break;
+            default: 'Not Valid input!'
+    }
+    return option
+}
+      console.log(ATMSystem(2));
