@@ -20,8 +20,6 @@ const speedingTicketCalculator = speed => {
     else return 'You have got no fine'
 }
 console.log(speedingTicketCalculator(90));
-console.log(speedingTicketCalculator(120));
-console.log(speedingTicketCalculator(12));
 
 //  7-  ATM Withdrawal
 //    A person wants to withdraw money from an ATM.
