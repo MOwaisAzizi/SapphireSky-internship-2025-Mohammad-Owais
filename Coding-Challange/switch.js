@@ -172,7 +172,7 @@ class MusicPlaylist {
 
     next() {
         if (this.songs.length === 0) {
-            console.log("No songs in the playlist.");
+            console.log("No songs in the playlist");
             return;
         }
         this.currentIndex = (this.currentIndex + 1);
@@ -181,7 +181,7 @@ class MusicPlaylist {
 
     previous() {
         if (this.songs.length === 0) {
-            console.log("No songs in the playlist.");
+            console.log("No songs in the playlist");
             return;
         }
         this.currentIndex = (this.currentIndex - 1);
@@ -215,3 +215,5 @@ myPlaylist.executeCommand("play");
 myPlaylist.executeCommand("pause");
 myPlaylist.executeCommand("previous");
 myPlaylist.executeCommand("play");      
+
+//16 
