@@ -126,3 +126,18 @@ function rotateArray(arr, k) {
       return [max, secondMax]
    }
   console.log(secondLargest([2,6,5,4,1,3,4,5]));
+
+
+  //10-Implement a function that finds the intersection of two arrays.
+  function intersectionArrays(arr1,arr2){
+    let newArr = []
+     for(let i = 0; i< arr1.length; i++){
+      if(arr2.includes(arr1[i])){
+       console.log(i);
+       newArr[i] = arr1[i]
+      }
+     }
+     newArr = newArr.filter(()=> true)
+     return newArr
+   }
+    console.log(intersectionArrays([2,3,,84,5,,21,1],[3,4,1,5,5,7]));
