@@ -69,14 +69,6 @@ function factorial(number) {
 }
 // console.log(factorial(4));
 
-//second solution
-//   7- Factorial of a Number
-function factorial2(number) {
-    if (number === 0 || number === 1) return number
-    return number * factorial2(number - 1)
-    //  number * (number-1) (number-2) (number-3)
-}
-// console.log(factorial2(4));
 
 //8-Find Largest and Smallest in a List
 function findSmallAndLargeNumber(arr) {
