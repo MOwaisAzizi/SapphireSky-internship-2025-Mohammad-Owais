@@ -67,7 +67,7 @@ console.log(factorial(4));
 
 //8-Find the GCD of Two Numbers
 function findGCD(a, b) {
-    if (a < b) return 'first input must be biger then second'
+    if (a < b) [a,b] = [b,a]
 
     while (b !== 0) {
         let temp = b
