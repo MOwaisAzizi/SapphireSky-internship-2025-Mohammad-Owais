@@ -10,8 +10,8 @@ function isPalindrom(str) {
     arrString.reverse()
     const newString = arrString.join('')
     return newString === str
-    
-   ////Second Solution
+
+    ////Second Solution
 
     // let left = 0
     // let right = str.length-1
@@ -23,30 +23,41 @@ function isPalindrom(str) {
     //     else return false
     // }
     //   return true
+}
+console.log(isPalindrom('wow'));
+
+
+// 2- count vowels in a string
+function countVowels(str) {
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    let count = 0
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i].toLowerCase())) count++
     }
-    console.log(isPalindrom('wow'));
-
-
-    // 2- count vowels in a string
-    function countVowels(str){
-        const vowels = ['a', 'e', 'i', 'o', 'u']
-        let count = 0
-        for(let i = 0; i<str.length; i++){
-            if(vowels.includes(str[i].toLowerCase())) count ++
-        }
-        return count
-    }
-    console.log(countVowels('Hello World'));
+    return count
+}
+console.log(countVowels('Hello World'));
 
 
 
-    // 3- write a function to reverse string
-    function reverseString(str){
-        let strArray = []
-        for (let i = str.length; i >= 0; i--) {
+// 3- write a function to reverse string
+function reverseString(str) {
+    let strArray = []
+    for (let i = str.length; i >= 0; i--) {
         strArray.push(str[i])
-        }
-        return strArray.join('')
     }
-        console.log(reverseString('Hello world'));
-        
+    return strArray.join('')
+}
+console.log(reverseString('Hello world'));
+
+
+//4- remove spaces from string
+function removeSpace(str){
+  let newString = ''
+  for (let i = 0; i < str.length; i++) {
+      if(str[i] === ' ') newString += ''
+      else newString += str[i]
+  }
+  return newString
+}
+console.log(removeSpace('He llo wo r ld'));
