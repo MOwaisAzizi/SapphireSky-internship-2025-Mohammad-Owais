@@ -1,3 +1,4 @@
+////SWITCH CASE
 
 // 9- Use switch to print the corresponding season:
 // 12, 1, 2 → Winter
