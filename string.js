@@ -26,7 +26,7 @@ function isPalindrom(str) {
     }
     console.log(isPalindrom('wow'));
 
-    
+
     // 2- count vowels in a string
     function countVowels(str){
         const vowels = ['a', 'e', 'i', 'o', 'u']
@@ -37,4 +37,16 @@ function isPalindrom(str) {
         return count
     }
     console.log(countVowels('Hello World'));
-    
+
+
+
+    // 3- write a function to reverse string
+    function reverseString(str){
+        let strArray = []
+        for (let i = str.length; i >= 0; i--) {
+        strArray.push(str[i])
+        }
+        return strArray.join('')
+    }
+        console.log(reverseString('Hello world'));
+        
