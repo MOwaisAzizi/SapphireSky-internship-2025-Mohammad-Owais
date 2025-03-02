@@ -20,7 +20,7 @@ printPrimeNumbers();
 
 //2-Pascal’s Triangle
 // Generate Pascal’s Triangle up to N rows.
-function generatePascalsTriangle(rows) {
+function PascalsTriangle(rows) {
     let triangle = [];
     for (let i = 0; i < rows; i++) {
         let row = [];
@@ -43,30 +43,5 @@ function printPascalsTriangle(triangle, rows) {
         console.log(spaces + rowString);
     }
 }
-generatePascalsTriangle(10);
-
-  
-
-
-
-//    *  
-//   ***  
-//  *****  
-// *******  
-
-// function startTrianglePattern(n){
-//     for (let i = 1; i < n; i++) {
-//         let stars = ''
-
-//         for (let s = i; s < n-1; s++){
-//             stars += ' '
-//         }
-    
-//         for (let j = 1; j <= i; j++) {
-//             i === j ? stars += '*' : stars += '**'
-//         }
-//         console.log(stars);
-//     }
-//  }
-// startTrianglePattern(10)
+PascalsTriangle(10);
  
