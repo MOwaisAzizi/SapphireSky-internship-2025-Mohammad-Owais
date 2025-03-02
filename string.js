@@ -1,5 +1,7 @@
 ////Stirng part
 
+///EASY PART
+
 // 1- is stirng is palindrom?
 function isPalindrom(str) {
     ////First Solution
@@ -55,9 +57,19 @@ console.log(reverseString('Hello world'));
 function removeSpace(str){
   let newString = ''
   for (let i = 0; i < str.length; i++) {
-      if(str[i] === ' ') newString += ''
+      if(str[i] === ' ') newString = newString
       else newString += str[i]
   }
   return newString
 }
 console.log(removeSpace('He llo wo r ld'));
+
+
+//5- Capitalize the first leter of each word in a string
+ function capitalizeWord(str){
+    const stringArray = str.split(' ')
+    const capitalizeArray = stringArray.map(str=>str[0].toUpperCase() + str.slice(1))
+    return capitalizeArray.join(' ')
+ }
+  console.log(capitalizeWord('hello world and wellcome'));
+  
