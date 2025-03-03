@@ -102,27 +102,38 @@ console.log(findNonRepeatCharacter('HelloobHe'));
 
 
 //7- check if two strings are anagram
-function isAnagram(str1,str2){
+function isAnagram(str1, str2) {
     // first solution
     // let stringArray = str1.split('').sort().join('')
     // let newStringArray = str2.split('').sort().join('')
     // return stringArray === newStringArray
 
     //second solution
-    if(str1.length !== str2.length) return false
+    if (str1.length !== str2.length) return false
     let isleterExistsInString = false
-     for(let i = 0; i< str1.length;i++){
-        for(let j = 0;j<str2.length;j++ ){
-        if(str1[i] === str2[j]) isleterExistsInString = true
+    for (let i = 0; i < str1.length; i++) {
+        for (let j = 0; j < str2.length; j++) {
+            if (str1[i] === str2[j]) isleterExistsInString = true
         }
-        if(!isleterExistsInString) return false
-     }
-     return isleterExistsInString
-  }
-  console.log(isAnagram('Woo','oWo'));
+        if (!isleterExistsInString) return false
+    }
+    return isleterExistsInString
+}
+console.log(isAnagram('Woo', 'oWo'));
 
 
-  //8-Implement a function to compress a string using character counts ("aabcccccaaa" → "a2b1c5a3").
-//   function characterCounts(){
-
-//   }
+//8-Implement a function to compress a string using character counts ("aabcccccaaa" → "a2b1c5a3").
+function compressString(str) {
+   let count = 1
+   let compressd = ''
+    for (let i = 0; i < str.length; i++) {
+        if(str[i] === str[i+1]){
+            count ++;
+        }else{
+            compressd += str[i] + (count > 1 ? count : '')
+            count = 1
+        }
+    }
+    return compressd
+}
+console.log(compressString('aabcdee'));
