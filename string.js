@@ -66,10 +66,11 @@ console.log(removeSpace('He llo wo r ld'));
 
 
 //5- Capitalize the first leter of each word in a string
- function capitalizeWord(str){
-    const stringArray = str.split(' ')
-    const capitalizeArray = stringArray.map(str=>str[0].toUpperCase() + str.slice(1))
-    return capitalizeArray.join(' ')
+function capitalizeWord(str){
+    let stringArray = str.split(' ')
+    const capitalizedArray = stringArray.map(str=>str[0].toUpperCase() + str.slice(1))
+    const capitalizedString = capitalizedArray.join(' ')
+    return capitalizedString
  }
-  console.log(capitalizeWord('hello world and wellcome'));
-  
+console.log(capitalizeWord('hello world and wellcome'));
+
