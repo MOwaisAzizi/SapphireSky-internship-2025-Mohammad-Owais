@@ -54,24 +54,24 @@ console.log(reverseString('Hello world'));
 
 
 //4- remove spaces from string
-function removeSpace(str){
-  let newString = ''
-  for (let i = 0; i < str.length; i++) {
-      if(str[i] === ' ') newString = newString
-      else newString += str[i]
-  }
-  return newString
+function removeSpace(str) {
+    let newString = ''
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === ' ') newString = newString
+        else newString += str[i]
+    }
+    return newString
 }
 console.log(removeSpace('He llo wo r ld'));
 
 
 //5- Capitalize the first leter of each word in a string
-function capitalizeWord(str){
+function capitalizeWord(str) {
     let stringArray = str.split(' ')
-    const capitalizedArray = stringArray.map(str=>str[0].toUpperCase() + str.slice(1))
+    const capitalizedArray = stringArray.map(str => str[0].toUpperCase() + str.slice(1))
     const capitalizedString = capitalizedArray.join(' ')
     return capitalizedString
- }
+}
 console.log(capitalizeWord('hello world and wellcome'));
 
 
@@ -84,7 +84,7 @@ function findNonRepeatCharacter(str) {
 
     for (let i = 0; i < stringArray.length; i++) {
         let isUnique = true;
-        
+
         for (let j = 0; j < stringArray.length; j++) {
             if (i !== j && stringArray[i] === stringArray[j]) {
                 isUnique = false;
@@ -98,10 +98,15 @@ function findNonRepeatCharacter(str) {
     }
     return null;
 }
-console.log(findNonRepeatCharacter('HelloobHe')); 
+console.log(findNonRepeatCharacter('HelloobHe'));
 
 
 //7- check if two strings are anagram
-function isAnagram(str){
-
-}
+function isAnagram(str1,str2){
+    let stringArray = str1.split('').sort().join('')
+    let newStringArray = str2.split('').sort().join('')
+    
+    return stringArray === newStringArray
+  }
+  console.log(isAnagram('Hello','llHeo'));
+  

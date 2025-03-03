@@ -79,12 +79,12 @@ console.log(reverseArray([5, 4, 3, 2, 1]));
 //7-How do you merge two sorted arrays into one sorted array?
 function sortedArray(sortedArr1, sortedArr2) {
     let mergedArrays = [...sortedArr1, ...sortedArr2]
-   
+
     for (let i = 0; i < mergedArrays.length; i++) {
 
         for (let j = i; j <= mergedArrays.length; j++) {
             if (mergedArrays[j] > mergedArrays[j + 1]) {
-                [mergedArrays[j], mergedArrays[j + 1] ] = [mergedArrays[j + 1] ,mergedArrays[j]]
+                [mergedArrays[j], mergedArrays[j + 1]] = [mergedArrays[j + 1], mergedArrays[j]]
             }
         }
     }
@@ -152,7 +152,7 @@ function findFibonacci(number) {
     let temp = 0
     let a = 0
     let b = 1
-    for (let i = 1; i < number-1; i++) {
+    for (let i = 1; i < number - 1; i++) {
         temp = a + b
         a = b
         b = temp
