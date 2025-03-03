@@ -103,10 +103,26 @@ console.log(findNonRepeatCharacter('HelloobHe'));
 
 //7- check if two strings are anagram
 function isAnagram(str1,str2){
-    let stringArray = str1.split('').sort().join('')
-    let newStringArray = str2.split('').sort().join('')
-    
-    return stringArray === newStringArray
+    // first solution
+    // let stringArray = str1.split('').sort().join('')
+    // let newStringArray = str2.split('').sort().join('')
+    // return stringArray === newStringArray
+
+    //second solution
+    if(str1.length !== str2.length) return false
+    let isleterExistsInString = false
+     for(let i = 0; i< str1.length;i++){
+        for(let j = 0;j<str2.length;j++ ){
+        if(str1[i] === str2[j]) isleterExistsInString = true
+        }
+        if(!isleterExistsInString) return false
+     }
+     return isleterExistsInString
   }
-  console.log(isAnagram('Hello','llHeo'));
-  
+  console.log(isAnagram('Woo','oWo'));
+
+
+  //8-Implement a function to compress a string using character counts ("aabcccccaaa" → "a2b1c5a3").
+//   function characterCounts(){
+
+//   }
