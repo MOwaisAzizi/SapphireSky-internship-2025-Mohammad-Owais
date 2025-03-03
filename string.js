@@ -74,3 +74,34 @@ function capitalizeWord(str){
  }
 console.log(capitalizeWord('hello world and wellcome'));
 
+
+
+////Midium
+
+//6-How can you find the frist non-repeating character in a string
+function findNonRepeatCharacter(str) {
+    const stringArray = str.split('');
+
+    for (let i = 0; i < stringArray.length; i++) {
+        let isUnique = true;
+        
+        for (let j = 0; j < stringArray.length; j++) {
+            if (i !== j && stringArray[i] === stringArray[j]) {
+                isUnique = false;
+                break;
+            }
+        }
+
+        if (isUnique) {
+            return stringArray[i];
+        }
+    }
+    return null;
+}
+console.log(findNonRepeatCharacter('HelloobHe')); 
+
+
+//7- check if two strings are anagram
+function isAnagram(str){
+
+}
