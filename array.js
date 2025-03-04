@@ -146,6 +146,20 @@ function intersectionArrays(arr1, arr2) {
 console.log(intersectionArrays([2, 3, 84, 5, , 21, 1], [3, 4, 1, 5, 5, 7]));
 
 
+ //15- write a function to rearange a the array such that even numbers appears before odd numbers
+  function rearrangeArray(arr){
+     const subArrayEven = []
+     const subArrayOdd = []
+     for (let i = 0; i < arr.length; i++) {
+       if(arr[i] % 2 === 0) subArrayEven.push(arr[i])
+       else if(arr[i] % 2 !== 0) subArrayOdd.push(arr[i])
+     }
+    arr = [...subArrayEven, ...subArrayOdd]
+    return arr
+  }
+   console.log(rearrangeArray([1,2,3,4,5,6,7,8]));
+   
+
 ////HARD SECTION
 
 function findFibonacci(number) {
@@ -160,3 +174,5 @@ function findFibonacci(number) {
     return b
 }
 console.log(findFibonacci(5));
+
+
