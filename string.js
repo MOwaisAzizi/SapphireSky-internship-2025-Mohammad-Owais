@@ -140,6 +140,21 @@ function compressString(str) {
 console.log(compressString('aaabcdee'));
 
 
+//How do you check if two strings are rotate of one another
+// test stte ttes estt
+// function isRotate(str1, str2){
+//     if(str1.length !== str2.length) return false
+//     console.log(str1 + ' ' + str2);
+    
+//     const mergeStrings = str1.split('') + ' ' + str2.split('')
+//     console.log(mergeStrings);
+    
+//     return mergeStrings.includes(str2)
+//  }
+//   console.log(isRotate('water', 'erwat'));
+  
+
+
 // 10- Write a function to check if a string contains only unique characters.
 function isUniqueCharacters(str) {
     let arrayString = str.split('')
@@ -155,5 +170,5 @@ function isUniqueCharacters(str) {
     }
     return isUnique
 }
-console.log(isUniqueCharacters('Hi world'));
+// console.log(isUniqueCharacters('Hi world'));
 
