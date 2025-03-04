@@ -170,5 +170,5 @@ function isUniqueCharacters(str) {
     }
     return isUnique
 }
-// console.log(isUniqueCharacters('Hi world'));
+console.log(isUniqueCharacters('Hi world'));
 
