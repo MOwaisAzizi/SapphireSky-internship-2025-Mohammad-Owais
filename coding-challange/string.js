@@ -13,8 +13,7 @@ function isPalindrom(str) {
     const newString = arrString.join('')
     return newString === str
 
-    ////Second Solution
-
+    //////Second Solution
     // let left = 0
     // let right = str.length-1
     // while(left < right){
@@ -27,6 +26,7 @@ function isPalindrom(str) {
     //   return true
 }
 console.log(isPalindrom('wow'));
+
 
 
 // 2- count vowels in a string
@@ -51,6 +51,7 @@ function reverseString(str) {
     return arrayString.join('')
 }
 console.log(reverseString('Hello world'));
+
 
 
 //4- remove spaces from string
@@ -101,6 +102,7 @@ function findFirstNonRepeatCharacter(str) {
 console.log(findFirstNonRepeatCharacter('HelloobHe'));
 
 
+
 //7- check if two strings are anagram
 function isAnagram(str1, str2) {
     // first solution
@@ -122,6 +124,7 @@ function isAnagram(str1, str2) {
 console.log(isAnagram('Woo', 'oWo'));
 
 
+
 //8-Implement a function to compress a string using character counts ("aabcccccaaa" → "a2b1c5a3").
 function compressString(str) {
     let count = 1
@@ -140,19 +143,15 @@ function compressString(str) {
 console.log(compressString('aaabcdee'));
 
 
-//How do you check if two strings are rotate of one another
-// test stte ttes estt
-// function isRotate(str1, str2){
-//     if(str1.length !== str2.length) return false
-//     console.log(str1 + ' ' + str2);
-    
-//     const mergeStrings = str1.split('') + ' ' + str2.split('')
-//     console.log(mergeStrings);
-    
-//     return mergeStrings.includes(str2)
-//  }
-//   console.log(isRotate('water', 'erwat'));
-  
+
+//9- How do you check if two strings are rotate of one another
+function isRotate(str1, str2) {
+    if (str1.length !== str2.length) return false;
+    const mergedStrings = str1 + str1; 
+    return mergedStrings.includes(str2);
+}
+console.log(isRotate('water', 'erwat'));
+
 
 
 // 10- Write a function to check if a string contains only unique characters.
