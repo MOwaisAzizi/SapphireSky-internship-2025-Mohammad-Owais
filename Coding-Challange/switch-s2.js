@@ -216,5 +216,3 @@ myPlaylist.executeCommand("play");
 myPlaylist.executeCommand("pause");
 myPlaylist.executeCommand("previous");
 myPlaylist.executeCommand("play");      
-
-//16 

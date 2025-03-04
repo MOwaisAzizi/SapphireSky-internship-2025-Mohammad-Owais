@@ -1,4 +1,4 @@
-//// Bonus Challenge: Nested Loops
+////// Bonus Challenge: Nested Loops
 
 // 1-Print Prime Numbers from 1 to 100
 function printPrimeNumbers() {
@@ -16,6 +16,7 @@ function printPrimeNumbers() {
     }
 }
 printPrimeNumbers();
+
 
 
 //2-Pascal’s Triangle
@@ -45,3 +46,34 @@ function printPascalsTriangle(triangle, rows) {
 }
 PascalsTriangle(10);
  
+
+
+//3-Matrix Multiplication
+// Given two matrices, multiply them using nested loops.
+function multiplyMatrices(A, B) {
+    let m = A.length, n = A[0].length, p = B[0].length;
+    if (n !== B.length) return 'Matrices can not be multiply'
+
+    let C = new Array(m).fill(0).map(() => new Array(p).fill(0));
+
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < p; j++) {
+            for (let k = 0; k < n; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+    return C;
+}
+
+let A = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+
+let B = [
+    [7, 8],
+    [9, 10],
+    [11, 12]
+]
+console.log(multiplyMatrices(A, B));
