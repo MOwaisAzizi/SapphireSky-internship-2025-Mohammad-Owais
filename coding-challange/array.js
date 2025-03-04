@@ -147,16 +147,15 @@ console.log(intersectionArrays([2, 3, 84, 5, , 21, 1], [3, 4, 1, 5, 5, 7]));
 
 
 ////HARD SECTION
-console.log('HArd SEction');
 
 //11- who do you remove duplicate elements from an array?
 function removeDuplicateElements(arr) {
-    var uniqueArray = [];
+    let uniqueArray = [];
 
-    for (var i = 0; i < arr.length; i++) {
-        var isDuplicate = false; 
+    for (let i = 0; i < arr.length; i++) {
+        let isDuplicate = false; 
 
-        for (var j = 0; j < uniqueArray.length; j++) {
+        for (let j = 0; j < uniqueArray.length; j++) {
             if (arr[i] === uniqueArray[j]) {
                 isDuplicate = true; 
                 break;
@@ -174,27 +173,26 @@ console.log(removeDuplicateElements([2, 3, 2, 4, 3, 5]))
 
 
 
-//12-write a function to find the missing numbers from 1 to N
+//12-write a function to find the missing number from 1 to N
 function findMissingNumbers(arr) {
-    let missingNumbers = []
     let max = arr[0]
+    let sumOfArray = 0
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > max) max = arr[i]
+        sumOfArray += arr[i]
+    }
+    
+    let sumOfOneToN = 0
+    for (let i = 1; i <= max; i++) {
+      sumOfOneToN += i   
     }
 
-    for (let i = 1; i < max; i++) {
-        for (let j = 0; j < max; j++) {
-            if (i !== j && arr[j] !== i) {
-                missingNumbers.push(i)
-                break
-            }
-            else break
-        }
-    }
-    return missingNumbers
-}
-console.log(findMissingNumbers([1, 5, 6]));
+    const missingNumber = sumOfOneToN - sumOfArray
+
+    return missingNumber
+ }
+console.log(findMissingNumbers([1,3,2,5,6]));
 
 
 
