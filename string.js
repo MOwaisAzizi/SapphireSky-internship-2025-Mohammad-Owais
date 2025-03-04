@@ -44,11 +44,11 @@ console.log(countVowels('Hello World'));
 
 // 3- write a function to reverse string
 function reverseString(str) {
-    let strArray = []
+    let arrayString = []
     for (let i = str.length; i >= 0; i--) {
-        strArray.push(str[i])
+        arrayString.push(str[i])
     }
-    return strArray.join('')
+    return arrayString.join('')
 }
 console.log(reverseString('Hello world'));
 
@@ -67,8 +67,8 @@ console.log(removeSpace('He llo wo r ld'));
 
 //5- Capitalize the first leter of each word in a string
 function capitalizeWord(str) {
-    let stringArray = str.split(' ')
-    const capitalizedArray = stringArray.map(str => str[0].toUpperCase() + str.slice(1))
+    let arrayString = str.split(' ')
+    const capitalizedArray = arrayString.map(str => str[0].toUpperCase() + str.slice(1))
     const capitalizedString = capitalizedArray.join(' ')
     return capitalizedString
 }
@@ -79,34 +79,34 @@ console.log(capitalizeWord('hello world and wellcome'));
 ////Midium
 
 //6-How can you find the frist non-repeating character in a string
-function findNonRepeatCharacter(str) {
-    const stringArray = str.split('');
+function findFirstNonRepeatCharacter(str) {
+    const arrayString = str.split('');
 
-    for (let i = 0; i < stringArray.length; i++) {
+    for (let i = 0; i < arrayString.length; i++) {
         let isUnique = true;
 
-        for (let j = 0; j < stringArray.length; j++) {
-            if (i !== j && stringArray[i] === stringArray[j]) {
+        for (let j = 0; j < arrayString.length; j++) {
+            if (i !== j && arrayString[i] === arrayString[j]) {
                 isUnique = false;
                 break;
             }
         }
 
         if (isUnique) {
-            return stringArray[i];
+            return arrayString[i];
         }
     }
     return null;
 }
-console.log(findNonRepeatCharacter('HelloobHe'));
+console.log(findFirstNonRepeatCharacter('HelloobHe'));
 
 
 //7- check if two strings are anagram
 function isAnagram(str1, str2) {
     // first solution
-    // let stringArray = str1.split('').sort().join('')
-    // let newStringArray = str2.split('').sort().join('')
-    // return stringArray === newStringArray
+    // let arrayString = str1.split('').sort().join('')
+    // let newarrayString = str2.split('').sort().join('')
+    // return arrayString === newarrayString
 
     //second solution
     if (str1.length !== str2.length) return false
@@ -124,16 +124,36 @@ console.log(isAnagram('Woo', 'oWo'));
 
 //8-Implement a function to compress a string using character counts ("aabcccccaaa" → "a2b1c5a3").
 function compressString(str) {
-   let count = 1
-   let compressd = ''
+    let count = 1
+    let compressd = ''
     for (let i = 0; i < str.length; i++) {
-        if(str[i] === str[i+1]){
-            count ++;
-        }else{
+        if (str[i] === str[i + 1]) {
+            count++;
+
+        } else {
             compressd += str[i] + (count > 1 ? count : '')
             count = 1
         }
     }
     return compressd
 }
-console.log(compressString('aabcdee'));
+console.log(compressString('aaabcdee'));
+
+
+// 10- Write a function to check if a string contains only unique characters.
+function isUniqueCharacters(str) {
+    let arrayString = str.split('')
+    let isUnique = true
+
+    for (let i = 0; i < str.length; i++) {
+        if (arrayString[i] === ' ') continue
+
+        for (let j = i; j < str.length; j++) {
+
+            if (i !== j && j !== ' ' && arrayString[i] === arrayString[j]) return isUnique = false
+        }
+    }
+    return isUnique
+}
+console.log(isUniqueCharacters('Hi world'));
+
