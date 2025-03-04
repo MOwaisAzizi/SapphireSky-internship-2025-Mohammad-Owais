@@ -146,7 +146,71 @@ function intersectionArrays(arr1, arr2) {
 console.log(intersectionArrays([2, 3, 84, 5, , 21, 1], [3, 4, 1, 5, 5, 7]));
 
 
+////HARD SECTION
 
+//11- who do you remove duplicate elements from an array?
+function removeDuplicateElements(arr) {
+    const uniqeArray = []
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i; j < arr.length; j++) {
+            if (i !== j && arr[i] !== arr[j]) {
+                uniqeArray.push(arr[j])
+            }
+        }
+    }
+    return uniqeArray
+}
+console.log(removeDuplicateElements([2, 3, 2, 4, 3, 5]));
+
+
+
+//12-write a function to find the missing numbers from 1 to N
+  function findMissingNumbers(arr){
+    let missingNumbers = []
+    let max = arr[0]
+
+    for (let i = 0; i < arr.length; i++) {
+      if(arr[i] > max) max = arr[i]        
+    }
+
+    for (let i = 1; i < max; i++) {
+        for(let j = 0; j < max; j++){
+            if(i !== j && arr[j] !== i) {
+                missingNumbers.push(i) 
+                break
+            }
+            else break
+        }
+    }
+    return missingNumbers
+  }
+ console.log(findMissingNumbers([1,5,6]));
+
+
+//13- who do your check if two arrays are equal
+      function isArraysEqual(arr1, arr2){
+        if(arr1.length !== arr2.length) return false
+      
+      for (let i = 0; i < arr1.length; i++) {
+       if(arr1[i] !== arr2[i]) return false       
+      }
+      return true
+      }
+     console.log(isArraysEqual([1,2,3], [1,2,3]));
+     
+
+ //15- write a function to rearange a the array such that even numbers appears before odd numbers
+  function rearrangeArray(arr){
+     const subArrayEven = []
+     const subArrayOdd = []
+     for (let i = 0; i < arr.length; i++) {
+       if(arr[i] % 2 === 0) subArrayEven.push(arr[i])
+       else if(arr[i] % 2 !== 0) subArrayOdd.push(arr[i])
+     }
+    arr = [...subArrayEven, ...subArrayOdd]
+    return arr
+  }
+   console.log(rearrangeArray([1,2,3,4,5,6,7,8]));
 
 
 
