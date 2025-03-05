@@ -197,20 +197,30 @@ console.log(findMissingNumbers([1,3,2,5,6]));
 
 
 //13- who do your check if two arrays are equal
-function isArraysEqual(arr1, arr2) {
+function areArraysEqual(arr1, arr2) {
     if (arr1.length !== arr2.length) return false
+    
+    arr1.sort()
+    arr2.sort()
 
     for (let i = 0; i < arr1.length; i++) {
         if (arr1[i] !== arr2[i]) return false
     }
     return true
 }
-console.log(isArraysEqual([1, 2, 3], [1, 2, 3]));
+console.log(areArraysEqual([1, 2, 3], [2,1,3]));
 
 
 
-//15- write a function to rearange a the array such that even numbers appears before odd numbers
-function rearrangeArray(arr) {
+//15- implement a function to find the subarray with the maximum sum(Kadane's Algorithm)
+ function maxSubArraySum(arr){
+ 
+ }
+
+
+
+//14- write a function to rearange a the array such that even numbers appears before odd numbers
+function rearrangeEvenOdd(arr) {
     const subArrayEven = []
     const subArrayOdd = []
     for (let i = 0; i < arr.length; i++) {
@@ -220,7 +230,9 @@ function rearrangeArray(arr) {
     arr = [...subArrayEven, ...subArrayOdd]
     return arr
 }
-console.log(rearrangeArray([1, 2, 3, 4, 5, 6, 7, 8]));
+console.log(rearrangeEvenOdd([1, 2, 3, 4, 5, 6, 7, 8]));
+
+
 
 
 
