@@ -1,4 +1,4 @@
-////OOP AND DEBUGIN PRACTICAL QUESTIONS
+//// OOP PRACTICAL QUESTIONS
 
 // 4. Write a JavaScript Class Car with a displayInfo method and brand and model property
 class Car {
