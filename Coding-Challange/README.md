@@ -1,30 +1,32 @@
 **_OOP AND DEBUGIN EXPLATORY QUESTIONS_**
 
-1. Four Pillars of Object-Oriented Programming (OOP)
-   _ANSWER_
-   The four main principles of OOP are:
-   Encapsulation: Bundling data (variables) and methods (functions) that operate on the data into a single unit (class) and restricting direct access to some details.
+1.  Four Pillars of Object-Oriented Programming (OOP)
+    _ANSWER_
+    The four main principles of OOP are:
+    Encapsulation: Bundling data (variables) and methods (functions) that operate on the data into a single unit (class) and restricting direct access to some details.
 
-Abstraction: Hiding complex implementation details and exposing only the necessary parts of an object.
+    Abstraction: Hiding complex implementation details and exposing only the necessary parts of an object.
 
-Inheritance: Allowing a class (child) to inherit properties and methods from another class (parent).
+    Inheritance: Allowing a class (child) to inherit properties and methods from another class (parent).
 
-Polymorphism: The ability for different classes to be treated as instances of the same class, usually through method overriding.
+    Polymorphism: The ability for different classes to be treated as instances of the same class, usually through method overriding.
 
-2. Explain Encapsulation in JavaScript With Example
-   Encapsulation is achieved using classes and private properties/methods.
-   Example of Encapsulation:
+2.  Explain Encapsulation in JavaScript With Example
+    _ANSWER_
+    Encapsulation is achieved using classes and private properties/methods.
+    Example of Encapsulation:
 
-_EXAMPLE_
-class Person {
-#name;
-constructor(name, age) {
-this.#name = name;
-this.age = age;
-}
-getName() {
-return this.#name;
-} }
+    _EXAMPLE_
+    class Person {
+    #name;
+    constructor(name, age) {
+    this.#name = name;
+    this.age = age;
+    }
+    getName() {
+    return this.#name;
+    }
+    }
 
     const person1 = new Person("John", 25);
     console.log(person1.getName());
@@ -37,7 +39,7 @@ return this.#name;
     JavaScript classes are syntactic sugar over prototypes, whereas Java/C++ strictly follow OOP principles.
     JavaScript allows dynamic object modification at runtime, while Java/C++ are more rigid.
 
-4.  Explain Prototype-Based Inheritance in JavaScript With Example
+5.  Explain Prototype-Based Inheritance in JavaScript With Example
     _ANSWER_
     JavaScript objects inherit directly from other objects using prototypes.
     Here, dog inherits from Animal using prototypes.
@@ -52,7 +54,7 @@ return this.#name;
     const dog = new Animal("Dog");
     dog.speak();
 
-5.  What is Method Overriding in JavaScript and Who Do You Use it ?
+7.  What is Method Overriding in JavaScript and How Do You Use it ?
     _ANSWER_
     Method overriding allows a child class to modify a method inherited from a parent class.
     _EXAMPLE_
@@ -71,7 +73,7 @@ return this.#name;
         const obj = new Child();
         obj.showMessage();
 
-6.  Purpose of super() in JavaScript Classes
+9.  Purpose of super() in JavaScript Classes
     _ANSWER_
     super() is used to call the constructor or methods of a parent class inside a child class.
     _EXAMPLE_
@@ -98,11 +100,10 @@ return this.#name;
         const myDog = new Dog("Buddy", "Golden Retriever");
             myDog.speak();
 
-7.  Composition vs. Inheritance
+10.  Composition vs. Inheritance
     _Answer_
     inheritance:A child class inherits from a parent class
     Composition: An object contains instances of other objects
-
     inheritance: Uses parent methods directly
     Composition: uses contained objects' functionality
 
@@ -140,7 +141,7 @@ _DEBUGIN QUESTIONS_
 
 _EXAMPLE_
 let x = 10;
-console.log("Value of x:", x); // Output: Value of x: 10
+console.log("Value of x:", x);
 
     How it helps in debugging?
     Helps track variable values.
@@ -175,7 +176,8 @@ console.log("Value of x:", x); // Output: Value of x: 10
 
 6.  Difference Between throw and console.error()
     _ANSWER_
-    console.error("This is an error message"); // Logs error, but execution continues throw new Error("This stops execution"); // Stops execution unless caught
+    console.error("This is an error message"); // Logs error, but execution continues
+    throw new Error("This stops execution"); // Stops execution unless caught
 
 7.  Using debugger in JavaScript
     _ANSWER_

@@ -52,3 +52,4 @@ class Square extends Shape {
 const shapes = [new Shape(), new Circle(), new Square()];
 shapes.forEach(shape => shape.draw());
 
+
