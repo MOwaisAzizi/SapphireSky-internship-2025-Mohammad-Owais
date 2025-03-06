@@ -212,7 +212,7 @@ console.log(areArraysEqual([1, 2, 3], [2,1,3]));
 
 
 
-//15- implement a function to find the subarray with the maximum sum(Kadane's Algorithm)
+//14- implement a function to find the subarray with the maximum sum(Kadane's Algorithm)
  function maxSubarraySum(arr) {
     let maxSum = -Infinity;
     let currentSum = 0;
@@ -231,7 +231,7 @@ console.log(maxSubarraySum([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
 
 
 
-//14- write a function to rearange a the array such that even numbers appears before odd numbers
+//15- write a function to rearange a the array such that even numbers appears before odd numbers
 function rearrangeEvenOdd(arr) {
     const subArrayEven = []
     const subArrayOdd = []

@@ -171,3 +171,42 @@ function isUniqueCharacters(str) {
 }
 console.log(isUniqueCharacters('Hi world'));
 
+
+
+//11-Implement a function to find the longest palindrome substring in a string.
+function longestPalindrome(s) {
+    if (!s || s.length < 1) return "";
+    let start = 0, end = 0;
+    function expandAroundCenter(left, right) {
+        while (left >= 0 && right < s.length && s[left] === s[right]) {
+            left--;
+            right++;
+        }
+        return right - left - 1;
+    }
+    for (let i = 0; i < s.length; i++) {
+        let len1 = expandAroundCenter(i, i); // Odd length palindrome
+        let len2 = expandAroundCenter(i, i + 1); // Even length palindrome
+        let len = Math.max(len1, len2);
+        if (len > end - start) {
+            start = i - Math.floor((len - 1) / 2);
+            end = i + Math.floor(len / 2);
+        }
+    }
+    return s.substring(start, end + 1);
+}
+
+console.log(longestPalindrome("babad")); // Output: "bab" or "aba"
+
+
+
+// 13- Implement a function to count the number of occurrences of each character in a string
+ function countCharacter(str){
+    const countMap = {}
+
+    for (let i = 0; i < str.length; i++) { 
+    countMap[str[i]] = (countMap[str[i]] || 0) + 1;   
+    }
+    return countMap
+ }
+console.log(countCharacter('Hello World'));
