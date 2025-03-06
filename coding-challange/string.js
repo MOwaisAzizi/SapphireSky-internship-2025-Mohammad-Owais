@@ -200,6 +200,28 @@ console.log(longestPalindrome("babad")); // Output: "bab" or "aba"
 
 
 
+//14-find all permutations of a string
+function getPermutations(str){
+  if(str === '') return ['']
+  let resutl = []
+
+   for (let i=0; i<str.length; i++) {
+     const char = str[i]
+     const remaining = str.slice(0,i) + str.slice(i+1)
+     const permutations = getPermutations(remaining)
+    
+    for(let perm of permutations){
+        resutl.push(char + perm)//abc
+       console.log(resutl);
+       console.log(char + perm);
+    }
+   }
+   return resutl
+}
+console.log(getPermutations('abc'));
+
+
+
 // 13- Implement a function to count the number of occurrences of each character in a string
  function countCharacter(str){
     const countMap = {}
