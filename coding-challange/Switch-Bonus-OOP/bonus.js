@@ -21,7 +21,7 @@ printPrimeNumbers();
 
 //2-Pascal’s Triangle
 // Generate Pascal’s Triangle up to N rows.
-function PascalsTriangle(rows) {
+function pascalsTriangle(rows) {
     let triangle = [];
     for (let i = 0; i < rows; i++) {
         let row = [];

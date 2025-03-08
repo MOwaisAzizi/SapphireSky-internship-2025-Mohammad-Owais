@@ -37,32 +37,51 @@ function correspondingSeason(key) {
 console.log(correspondingSeason(5));
 
 
-//10-Rock, Paper, Scissors Game
-function rockPaperScissors(rock, paper, scissors) {
-    if (rock.toLocaleLowerCase() !== 'rock' || paper.toLocaleLowerCase() !== 'paper' || scissors.toLocaleLowerCase() !== 'scissors') return 'Invalid Input'
+//10- Rock, Paper, Scissors Game
+function rockPaperScissors(userChoice) {
+    let states = ['rock', 'paper', 'scissors']
+    if (!states.includes(userChoice)) return 'Invalid Input'
 
     let winner = ''
-    const computerChoice = Math.floor(Math.random() * 3) + 1
+    const randomNumber = Math.floor(Math.random() * 3) + 1
+    let computerChoice = states[randomNumber - 1]
 
     switch (computerChoice) {
-        case 1: winner = rock
+        case 'rock': {
+            if (userChoice === 'paper') winner = 'User'
+            if (userChoice === 'scissors') winner = 'Computer'
+            else return 'Equal'
+        }
             break
-        case 2: winner = paper
+        case 'paper':
+            {
+                if (userChoice === 'scissors') winner = 'User'
+                else if (userChoice === 'rock') winner = 'Computer'
+                else return 'Equal'
+            }
             break
-        case 3: winner = scissors
+        case 'scissors':
+            {
+                if (userChoice === 'rock') winner = 'User'
+                else if (userChoice === 'paper') winner = 'Computer'
+                else return 'Equal'
+            }
             break
     }
     return winner
 }
-console.log(rockPaperScissors('rock', 'paper', 'scissors'));
-console.log(rockPaperScissors('rock', 'paper', 'scissors'));
+
+console.log(rockPaperScissors('rock'));
+console.log(rockPaperScissors('paper'));
+console.log(rockPaperScissors('rock'));
+
 
 
 //11-Roman Numeral Converter
 // Take an integer (1-10) as input.
 // Use switch to print the corresponding Roman numeral.
 function romanConverter(number) {
-    if(number > 10 || number < 1) return 'Invalid Month. please Enter Between 1-10'
+    if (number > 10 || number < 1) return 'Invalid Month. please Enter Between 1-10'
 
     switch (number) {
         case 1: return "I"
