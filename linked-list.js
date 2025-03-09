@@ -39,7 +39,7 @@ class LinkedList {
 
     }
 
-    countLinkedList(){
+    countLinkedList() {
         let temp = this.first
         let count = 0
         while (temp !== null) {
@@ -72,8 +72,8 @@ class LinkedList {
 
         while (current !== null) {
             next = current.next;
-            current.next = prev;  
-            prev = current;      
+            current.next = prev;
+            prev = current;
             current = next;
         }
 
