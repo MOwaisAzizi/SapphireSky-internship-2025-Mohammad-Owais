@@ -51,4 +51,9 @@ linkedList.deleteFrist()
 linkedList.display()
 
 
+//MIDIUM QUESTIONS
 
+// 6-Write a function to find the middle node of a linked list.
+ findMiddleNode(){
+    
+ }
