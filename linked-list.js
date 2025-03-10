@@ -76,8 +76,20 @@ class LinkedList {
             prev = current;
             current = next;
         }
+        this.first = prev; 
+    }
 
-        this.first = prev;  // Update the head to the new first node
+    //8-How do you detect a cycle in a linked list?
+    isCycle(){
+        let slow = this.first
+        let fast = this.first
+
+        while(fast !== null && fast.next !== null){
+            slow = slow.next
+            fast = fast.next.next
+            if (fast === slow) return true
+        }  
+        return false
     }
 }
 
@@ -90,10 +102,15 @@ linkedList.addFirst(5)
 linkedList.addFirst(6)
 linkedList.deleteFrist()
 console.log(linkedList.findMiddleOfList());
+
 linkedList.display()
 linkedList.reverse()
 linkedList.display()
 console.log(linkedList.countLinkedList());
+
+console.log(linkedList.isCycle());
+
+
 
 
 
