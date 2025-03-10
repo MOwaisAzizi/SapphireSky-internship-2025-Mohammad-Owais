@@ -110,8 +110,13 @@ console.log(linkedList.countLinkedList());
 
 console.log(linkedList.isCycle());
 
+//9-Write a function to merge two sorted linked lists.
+const linkedList2 = new LinkedList()
+linkedList2.addFirst(7)
+linkedList2.addFirst(8)
+linkedList2.addFirst(9)
 
-
+//10-How do you find the nth node from the end of a linked list?
 
 
 
