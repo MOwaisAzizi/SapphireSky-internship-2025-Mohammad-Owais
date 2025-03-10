@@ -100,21 +100,24 @@ linkedList.addFirst(3)
 linkedList.addFirst(4)
 linkedList.addFirst(5)
 linkedList.addFirst(6)
+
 linkedList.deleteFrist()
+
 console.log(linkedList.findMiddleOfList());
 
 linkedList.display()
 linkedList.reverse()
 linkedList.display()
+
 console.log(linkedList.countLinkedList());
 
 console.log(linkedList.isCycle());
 
 //9-Write a function to merge two sorted linked lists.
-const linkedList2 = new LinkedList()
-linkedList2.addFirst(7)
-linkedList2.addFirst(8)
-linkedList2.addFirst(9)
+// const linkedList2 = new LinkedList()
+// linkedList2.addFirst(7)
+// linkedList2.addFirst(8)
+// linkedList2.addFirst(9)
 
 //10-How do you find the nth node from the end of a linked list?
 
