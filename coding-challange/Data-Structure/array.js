@@ -196,7 +196,7 @@ console.log(findMissingNumbers([1,3,2,5,6]));
 
 
 
-//13- who do your check if two arrays are equal
+//13- who do you check if two arrays are equal
 function areArraysEqual(arr1, arr2) {
     if (arr1.length !== arr2.length) return false
     
@@ -220,6 +220,7 @@ console.log(areArraysEqual([1, 2, 3], [2,1,3]));
     for (let num of arr) {
         currentSum += num;
         maxSum = Math.max(maxSum, currentSum);
+        
         if (currentSum < 0) {
             currentSum = 0;
         }

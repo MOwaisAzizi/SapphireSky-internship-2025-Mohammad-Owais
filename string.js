@@ -163,47 +163,46 @@ function isUniqueCharacters(str) {
         if (arrayString[i] === ' ') continue
 
         for (let j = i; j < str.length; j++) {
-
             if (i !== j && j !== ' ' && arrayString[i] === arrayString[j]) return isUnique = false
         }
     }
     return isUnique
 }
-console.log(isUniqueCharacters('Hi world'));
+console.log(isUniqueCharacters('Hi World'));
 
 
 
 //11-Implement a function to find the longest palindrome substring in a string.
-function longestPalindrome(s) {
-    if (!s || s.length < 1) return "";
+function longestPalindrome(str) {
+    if (!str || str.length < 1) return "";
     let start = 0, end = 0;
     function expandAroundCenter(left, right) {
-        while (left >= 0 && right < s.length && s[left] === s[right]) {
+        while (left >= 0 && right < str.length && str[left] === str[right]) {
             left--;
             right++;
         }
         return right - left - 1;
     }
-    for (let i = 0; i < s.length; i++) {
-        let len1 = expandAroundCenter(i, i); // Odd length palindrome
-        let len2 = expandAroundCenter(i, i + 1); // Even length palindrome
+    for (let i = 0; i < str.length; i++) {
+        let len1 = expandAroundCenter(i, i);
+        let len2 = expandAroundCenter(i, i + 1); 
         let len = Math.max(len1, len2);
         if (len > end - start) {
             start = i - Math.floor((len - 1) / 2);
             end = i + Math.floor(len / 2);
         }
     }
-    return s.substring(start, end + 1);
+    return str.substring(start, end + 1);
 }
 
-console.log(longestPalindrome("babad")); // Output: "bab" or "aba"
+console.log(longestPalindrome("babad")); // outPut: "bab" or "aba"
 
 
 
 //14-find all permutations of a string
 function getPermutations(str){
   if(str === '') return ['']
-  let resutl = []
+  let result = []
 
    for (let i=0; i<str.length; i++) {
      const char = str[i]
@@ -211,13 +210,14 @@ function getPermutations(str){
      const permutations = getPermutations(remaining)
     
     for(let perm of permutations){
-        resutl.push(char + perm)//abc
-       console.log(resutl);
-       console.log(char + perm);
+        result.push(char + perm)//abc
+        console.log(result);
+
     }
    }
-   return resutl
+   return result
 }
+
 console.log(getPermutations('abc'));
 
 
