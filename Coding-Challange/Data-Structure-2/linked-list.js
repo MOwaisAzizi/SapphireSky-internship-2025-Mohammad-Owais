@@ -78,6 +78,9 @@ class LinkedList {
         }
         this.first = prev; 
     }
+//1,2,3,4,5
+// next null, cur = 1, pre = null,   next = 2, 2=>3, pre=1,cur=2,first=1
+// next=3,3=>4,pre=2,cur=3
 
     //8-How do you detect a cycle in a linked list?
     isCycle(){
@@ -90,6 +93,33 @@ class LinkedList {
             if (fast === slow) return true
         }  
         return false
+    }
+
+    //9-Write a function to merge two sorted linked lists.
+    mergeSortedLists(list2) {
+        let dummyNode = new Node(0);
+        let tail = dummyNode;
+        let current1 = this.first;
+        let current2 = list2.first;
+
+        while (current1 !== null && current2 !== null) {
+            if (current1.data <= current2.data) {
+                tail.next = current1;
+                current1 = current1.next;
+            } else {
+                tail.next = current2;
+                current2 = current2.next;
+            }
+            tail = tail.next;
+        }
+
+        if (current1 !== null) {
+            tail.next = current1;
+        } else {
+            tail.next = current2;
+        }
+
+        return dummyNode.next;
     }
 }
 
@@ -113,11 +143,19 @@ console.log(linkedList.countLinkedList());
 
 console.log(linkedList.isCycle());
 
-//9-Write a function to merge two sorted linked lists.
-// const linkedList2 = new LinkedList()
-// linkedList2.addFirst(7)
-// linkedList2.addFirst(8)
-// linkedList2.addFirst(9)
+const linkedList2 = new LinkedList();
+linkedList2.addFirst(7);
+linkedList2.addFirst(8);
+linkedList2.addFirst(9);
+
+const mergedList = linkedList.mergeSortedLists(linkedList2);
+console.log(mergedList);
+let temp = mergedList;
+while (temp !== null) {
+    console.log(temp.data);
+    temp = temp.next;
+}
+
 
 //10-How do you find the nth node from the end of a linked list?
 
