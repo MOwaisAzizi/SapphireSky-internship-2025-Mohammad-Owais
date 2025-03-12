@@ -78,9 +78,6 @@ class LinkedList {
         }
         this.first = prev;
     }
-    //1,2,3,4,5
-    // next null, cur = 1, pre = null,   next = 2, 2=>3, pre=1,cur=2,first=1
-    // next=3,3=>4,pre=2,cur=3
 
     //8-How do you detect a cycle in a linked list?
     isCycle() {
@@ -121,6 +118,7 @@ class LinkedList {
 
         return dummyNode.next;
     }
+
     //10-How do you find the nth node from the end of a linked list?
     findNthNodeFromEnd(n) {
         let slow = this.first
@@ -135,20 +133,31 @@ class LinkedList {
         return slow
     }
 
-    //// Hard
+//// Hard
 
-// Implement a function to remove duplicates from a linked list.
-   removeDuplicate(){
-    console.log('start');
-    
-   }
+// 11-Implement a function to remove duplicates from a linked list.
+removeDuplicates() {
+    const duplicateContainer = new Set();
+    let current = this.first;
+    let previous = null;
+    while (current) {
+      if (duplicateContainer.has(current.data)) {
+        previous.next = current.next; 
+      } else {
+        duplicateContainer.add(current.data);
+        previous = current;
+      }
+      current = current.next;
+    }
+  } 
 }
+
 
 const linkedList1 = new LinkedList()
 linkedList1.addFirst(1)
 linkedList1.addFirst(2)
 linkedList1.addFirst(3)
-linkedList1.addFirst(4)
+linkedList1.addFirst(3)
 linkedList1.addFirst(5)
 linkedList1.addFirst(6)
 
@@ -165,19 +174,19 @@ console.log(linkedList1.countLinkedList());
 console.log(linkedList1.isCycle());
 
 const linkedList2 = new LinkedList();
-linkedList2.addFirst(7);
-linkedList2.addFirst(8);
+linkedList2.addFirst(3);
+linkedList2.addFirst(4);
 linkedList2.addFirst(9);
 
-const mergedList = linkedList1.mergeSortedLists(linkedList2);
-console.log(mergedList);
-let temp = mergedList;
-while (temp !== null) {
-    console.log(temp.data);
-    temp = temp.next;
-}
+linkedList1.mergeSortedLists(linkedList2);
+linkedList1.display()
 
-console.log(linkedList1.findNthNodeFromEnd(1));
+// console.log(linkedList1.findNthNodeFromEnd(1));
+console.log('after duplicate');
+
+linkedList1.removeDuplicates()
+linkedList1.display()
+
 
 
 
