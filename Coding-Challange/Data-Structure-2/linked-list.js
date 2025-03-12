@@ -76,22 +76,22 @@ class LinkedList {
             prev = current;
             current = next;
         }
-        this.first = prev; 
+        this.first = prev;
     }
-//1,2,3,4,5
-// next null, cur = 1, pre = null,   next = 2, 2=>3, pre=1,cur=2,first=1
-// next=3,3=>4,pre=2,cur=3
+    //1,2,3,4,5
+    // next null, cur = 1, pre = null,   next = 2, 2=>3, pre=1,cur=2,first=1
+    // next=3,3=>4,pre=2,cur=3
 
     //8-How do you detect a cycle in a linked list?
-    isCycle(){
+    isCycle() {
         let slow = this.first
         let fast = this.first
 
-        while(fast !== null && fast.next !== null){
+        while (fast !== null && fast.next !== null) {
             slow = slow.next
             fast = fast.next.next
             if (fast === slow) return true
-        }  
+        }
         return false
     }
 
@@ -121,34 +121,55 @@ class LinkedList {
 
         return dummyNode.next;
     }
+    //10-How do you find the nth node from the end of a linked list?
+    findNthNodeFromEnd(n) {
+        let slow = this.first
+        let fast = this.first
+
+        for (let i = 0; i < n-1 ; i++) fast = fast.next
+
+        while (fast.next !== null) {
+            fast = fast.next
+            slow = slow.next
+        }
+        return slow
+    }
+
+    //// Hard
+
+// Implement a function to remove duplicates from a linked list.
+   removeDuplicate(){
+    console.log('start');
+    
+   }
 }
 
-const linkedList = new LinkedList()
-linkedList.addFirst(1)
-linkedList.addFirst(2)
-linkedList.addFirst(3)
-linkedList.addFirst(4)
-linkedList.addFirst(5)
-linkedList.addFirst(6)
+const linkedList1 = new LinkedList()
+linkedList1.addFirst(1)
+linkedList1.addFirst(2)
+linkedList1.addFirst(3)
+linkedList1.addFirst(4)
+linkedList1.addFirst(5)
+linkedList1.addFirst(6)
 
-linkedList.deleteFrist()
+linkedList1.deleteFrist()
 
-console.log(linkedList.findMiddleOfList());
+console.log(linkedList1.findMiddleOfList());
 
-linkedList.display()
-linkedList.reverse()
-linkedList.display()
+linkedList1.display()
+linkedList1.reverse()
+linkedList1.display()
 
-console.log(linkedList.countLinkedList());
+console.log(linkedList1.countLinkedList());
 
-console.log(linkedList.isCycle());
+console.log(linkedList1.isCycle());
 
 const linkedList2 = new LinkedList();
 linkedList2.addFirst(7);
 linkedList2.addFirst(8);
 linkedList2.addFirst(9);
 
-const mergedList = linkedList.mergeSortedLists(linkedList2);
+const mergedList = linkedList1.mergeSortedLists(linkedList2);
 console.log(mergedList);
 let temp = mergedList;
 while (temp !== null) {
@@ -156,8 +177,10 @@ while (temp !== null) {
     temp = temp.next;
 }
 
+console.log(linkedList1.findNthNodeFromEnd(1));
 
-//10-How do you find the nth node from the end of a linked list?
+
+
 
 
 
