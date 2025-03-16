@@ -51,6 +51,8 @@ class LinkedList {
         return count;
     }
 
+        //MIDIUM QUESTIONS
+
     // 6-Write a function to find the middle node of a linked list.
     findMiddleOfList() {
         let slowStep = this.first
@@ -152,9 +154,7 @@ class LinkedList {
     }
 
 
-    //MIDIUM QUESTIONS
-
-    //12- check if two linked lists intersect
+    //12- check if two linked lists intersects?
     intersectionOfTwoLists(list1, list2) {
         let lengthList1 = this.countLinkedList(list1);
         let lengthList2 = this.countLinkedList(list2);
@@ -175,19 +175,36 @@ class LinkedList {
         }
 
         while (current1 && current2) {
-            console.log(current1 === current2);
-
             if (current1 === current2) {
-                return current1; 
+                return true; 
             }
             current1 = current1.next;
             current2 = current2.next;
         }
 
-        return null;
+        return false;
     }
 
+    // 13-Write a function to find the starting point of a cycle in a linked list.
+    startingPointOfCycle() {
+        let slow = this.first
+        let fast = this.first
 
+        while (fast !== null && fast.next !== null) {
+            slow = slow.next
+            fast = fast.next.next
+
+            if (fast === slow)
+                this.slow = this.first
+
+            while (slow !== fast) {
+                slow = slow.next
+                fast = fast.next
+            }
+            return slow
+        }
+        return null
+    }
 
 }
 
