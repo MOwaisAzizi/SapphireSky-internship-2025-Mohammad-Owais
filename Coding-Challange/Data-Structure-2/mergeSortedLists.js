@@ -1,6 +1,8 @@
+const LinkedList = require('./LinkedList');
+const Node = require('./Node')
 
 //9-Write a function to merge two sorted linked lists.
-export default function mergeSortedLists(list1, list2) {
+function mergeSortedLists(list1, list2) {
     let dummyNode = new Node(0);
     let tail = dummyNode;
     let current1 = list1.first;
@@ -17,11 +19,16 @@ export default function mergeSortedLists(list1, list2) {
         tail = tail.next;
     }
 
+
     if (current1 !== null) {
         tail.next = current1;
     } else {
         tail.next = current2;
     }
 
-    return dummyNode.next;
+    const mergedList = new LinkedList()
+    mergedList.first = dummyNode.next
+    return mergedList;
 }
+
+module.exports = mergeSortedLists

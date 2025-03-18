@@ -1,6 +1,6 @@
     
     //12- check if two linked lists intersects?
-    export default function isTwoListsIntersects(list1, list2) {
+    function isTwoListsIntersects (list1, list2) {
         let lengthList1 = list1.sizeOfLinkedList();
         let lengthList2 = list2.sizeOfLinkedList();
 
@@ -29,3 +29,5 @@
 
         return false;
     }
+
+    module.exports = isTwoListsIntersects

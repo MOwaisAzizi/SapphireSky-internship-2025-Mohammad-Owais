@@ -1,4 +1,6 @@
-export default class LinkedList {
+const Node = require('./Node')
+
+class LinkedList {
     constructor() {
         this.first = null;
     }
@@ -27,7 +29,7 @@ export default class LinkedList {
     }
 
     //5-Implement a program to find the length of a linked list.
-     sizeOfLinkedList() {
+    sizeOfLinkedList() {
         let count = 0;
         let temp = this.first
 
@@ -38,8 +40,8 @@ export default class LinkedList {
         return count;
     }
 
-       // 6-Write a function to find the middle node of a linked list.
-       findMiddleOfList() {
+    // 6-Write a function to find the middle node of a linked list.
+    findMiddleOfList() {
         let slowStep = this.first
         let fastStep = this.first
 
@@ -51,22 +53,22 @@ export default class LinkedList {
         return slowStep.data
     }
 
-        //7-Implement a function to reverse a linked list.
-        reverse() {
-            let prev = null;
-            let current =  this.first
-            let next = null;
-    
-            while (current !== null) {
-                next = current.next;
-                current.next = prev;
-                prev = current;
-                current = next;
-            }
-            head = prev;
-        }
+    //7-Implement a function to reverse a linked list.
+    reverse() {
+        let prev = null;
+        let current = this.first
+        let next = null;
 
-   //8-How do you detect a cycle in a linked list?
+        while (current !== null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        this.first = prev;
+    }
+
+    //8-How do you detect a cycle in a linked list?
     isCycle() {
         let slow = this.first
         let fast = this.first
@@ -84,17 +86,20 @@ export default class LinkedList {
         let slow = this.first
         let fast = this.first
 
-        for (let i = 0; i < n - 1; i++) fast = fast.next
+        for (let i = 0; i < n - 1; i++) {
+            fast = fast.next
+        }
 
         while (fast.next !== null) {
             fast = fast.next
             slow = slow.next
         }
+
         return slow
     }
 
-     // 11-Implement a function to remove duplicates from a linked list.
-     removeDuplicates() {
+    // 11-Implement a function to remove duplicates from a linked list.
+    removeDuplicates() {
         const duplicateContainer = new Set();
         let current = this.first;
         let previous = null;
@@ -112,27 +117,29 @@ export default class LinkedList {
 
     // 13-Write a function to find the starting point of a cycle in a linked list.
     startingPointOfCycle() {
-        let slow = this.first
-        let fast = this.first
+        let slow = this.first;
+        let fast = this.first;
 
         while (fast !== null && fast.next !== null) {
-            slow = slow.next
-            fast = fast.next.next
+            slow = slow.next;
+            fast = fast.next.next;
 
-            if (fast === slow)
-                this.slow = this.first
+            if (fast === slow) {
+                slow = this.first;
 
-            while (slow !== fast) {
-                slow = slow.next
-                fast = fast.next
+                while (slow !== fast) {
+                    slow = slow.next;
+                    fast = fast.next;
+                }
+
+                return slow;
             }
-            return slow
         }
-        return null
+        return null;
     }
 
-     //14 -Implement a function to group even and odd nodes together in a linked list.
-     groupEvenOdd() {
+    //14 -Implement a function to group even and odd nodes together in a linked list.
+    groupEvenOdd() {
         if (!this.first || !this.first.next) {
             return this.first;
         }
@@ -157,10 +164,10 @@ export default class LinkedList {
             index++
         }
 
-        evenHeadTemp.next = null;
-        oddHeadTemp.next = evenHead.next;
+        oddHeadTemp.next = null;
+        evenHeadTemp.next = oddHead.next;
 
-        return oddHead.next;
+        return evenHead.next;
     }
 
     addLast(data) {
@@ -178,3 +185,5 @@ export default class LinkedList {
         newNode.next = null;
     }
 }
+
+module.exports = LinkedList

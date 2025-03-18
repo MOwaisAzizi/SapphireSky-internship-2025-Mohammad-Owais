@@ -1,7 +1,7 @@
-import mergeSortedLists from './mergeSortedLists';
-import isTwoListsIntersects from './isTwoListsIntersects'
-import addLinkedLists from './addTwoLists'
-import LinkedList from './linkedList';
+const mergeSortedLists = require('./mergeSortedLists');
+const  isTwoListsIntersects = require('./isTwoListsIntersects')
+const addLinkedLists = require('./sumLinkedLists')
+const LinkedList = require('./LinkedList');
 
 function testLinkedList() {
   const list = new LinkedList();
@@ -16,7 +16,7 @@ function testLinkedList() {
   // Test deleteFirst
   console.log('Test deleteFirst');
   const deletedNode = list.deleteFrist();
-  console.log(`Deleted Node : ${deletedNode}`);
+  console.log(`Deleted Node : ${deletedNode.data}`);
   
   // Test display
   console.log('Display Node Data');
@@ -26,35 +26,35 @@ function testLinkedList() {
   console.log('sizeOfLinkedList');
   console.log(list.sizeOfLinkedList());
   
-
   // Test findMiddleOfList
   console.log('findMiddleOfList');
   console.log(list.findMiddleOfList());
-  
 
   // Test reverse
   console.log('Test reverse');
-  list.reverse();
+  // list.reverse();
   list.display()
 
   // Test isCycle
   console.log('Test isCycle');
-  list.first.next.next = list.first;
+  // list.first.next.next = list.first;
   console.log(list.isCycle());
 
   // Test findNthNodeFromEnd
   console.log('Test findNthNodeFromEnd');
-  console.log(list.findNthNodeFromEnd(2));
+  const nthNode = list.findNthNodeFromEnd(2)
+  console.log(nthNode.data);
 
   // Test removeDuplicates
+  console.log('Add Duplicate Node');
+  // list.addFirst(2);
   console.log('Test removeDuplicates');
-  list.addFirst(2);
-  list.removeDuplicates();
+  // list.removeDuplicates();
   list.display()
 
   // Test startingPointOfCycle
   console.log('Test startingPointOfCycle');
-  list.first.next.next.next = list.first.next;
+  // list.first.next.next = list.first;
   const cycleStart = list.startingPointOfCycle();
   console.log(cycleStart);
 
@@ -67,14 +67,13 @@ function testLinkedList() {
   console.log('Test mergeSortedLists');
   const list1 = new LinkedList();
   const list2 = new LinkedList();
-  list1.addFirst(1);
   list1.addFirst(3);
+  list1.addFirst(1);
+  list2.addFirst(6);
   list2.addFirst(2);
-  list2.addFirst(4);
 
   const mergedList = mergeSortedLists(list1, list2);
-  console.log(mergedList);
-  
+  mergedList.display()
 
   // Test isTwoListsIntersects
   console.log('Test isTwoListsIntersects');
@@ -99,11 +98,11 @@ function testLinkedList() {
 
   console.log('list1');
   list5.display()
+  
   console.log('list1');
   list6.display()
   
-  const sumList = addLinkedLists(list5, list6);
-
+  const sumList = addLinkedLists(list5, list6); 
   console.log('sum of lists');
   sumList.display()
 }
