@@ -12,6 +12,10 @@ class StackArray {
     this.stack[this.top] = element
   }
 
+  testing(){
+    console.log('testing');
+    
+  }
   // Pop element from the stack
   pop() {
     if (this.top === -1) {
