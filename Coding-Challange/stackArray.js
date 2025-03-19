@@ -1,4 +1,4 @@
-// Implement a stack using an array in JavaScript.
+// 2-Implement a stack using an array in JavaScript.
 
 class StackArray {
   constructor() {
