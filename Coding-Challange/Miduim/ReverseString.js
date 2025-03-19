@@ -1,18 +1,19 @@
-const StackArray = require("../../stackArray");
+const StackArray = require("../easy/stackArray");
 
 //6-Implement a function to reverse a string using a stack.
 function reverseString(str) {
-    let stack = []
+    let stackArray = new StackArray()
     let reversedString = '';
 
     for (let i = 0; i < str.length; i++) {
-        stack.push(str[i]);
+        stackArray.stack.push(str[i]);
     }
 
-    while (stack.length > 0) {
-        reversedString += stack.pop();
+    while (stackArray.stack.length > 0) {
+        reversedString += stackArray.stack.pop();
     }
 
     return reversedString;
 }
+
 module.exports = reverseString

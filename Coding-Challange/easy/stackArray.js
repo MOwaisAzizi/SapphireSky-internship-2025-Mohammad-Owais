@@ -2,14 +2,14 @@
 
 class StackArray {
   constructor() {
-    this.stackArray = [];
+    this.stack = [];
     this.top = -1
   }
 
   // Push elements
   push(element) {
     this.top++
-    this.stackArray[this.top] = element
+    this.stack[this.top] = element
   }
 
   // Pop element from the stack
@@ -17,7 +17,7 @@ class StackArray {
     if (this.top === -1) {
       return "Stack is empty";
     }
-    const removedElement = this.stackArray[this.top];
+    const removedElement = this.stack[this.top];
     this.top--;
 
     return removedElement;
@@ -30,22 +30,22 @@ class StackArray {
     }
     console.log('pecking');
 
-    return this.stackArray[this.top];
+    return this.stack[this.top];
   }
 
   // Check if the stack is empty
   isEmpty() {
-    return this.stackArray.length === 0;
+    return this.stack.length === 0;
   }
 
   // Get the size of the stack
   size() {
-    return this.stackArray.length;
+    return this.stack.length;
   }
 
   // Clear the stack
   clear() {
-    this.stackArray = [];
+    this.stack = [];
   }
 }
 

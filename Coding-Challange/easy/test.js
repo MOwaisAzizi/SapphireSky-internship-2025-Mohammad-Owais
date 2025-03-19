@@ -1,8 +1,8 @@
 
 // Test Stack
 const StackArray = require("./stackArray")
-const StackList = require("./Coding-Challange/StackList");
-const reverseString = require("./Coding-Challange/Miduim/ReverseString");
+const StackList = require("./StackList");
+const reverseString = require("../Miduim/ReverseString");
 
 function testStackArray() {
     const stack = new StackArray();
@@ -18,16 +18,11 @@ function testStackArray() {
     stack.clear();
     console.log(stack.isEmpty());
 
-    //test reverse Stirng using stack
-    console.log(reverseString('Hello'));
-
 }
-testStackArray()
-
+// testStackArray()
 
 //Test Stack List
 function testStackList() {
-
     const stack = new StackList();
 
     // Test pushing elements
@@ -46,9 +41,8 @@ function testStackList() {
     // Test clearing the stack 
     stack.clear();
     console.log(stack.isEmpty());
-
-
 }
-
 // testStackList()
+
+
 
