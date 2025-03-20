@@ -54,4 +54,18 @@ class StackList {
   }
 }
 
-module.exports = StackList;
+
+const stack = new StackArray();
+//test push elements
+stack.push(10);//10
+stack.push(20);//20
+stack.push(30);//30
+
+//test peek of elements
+console.log(stack.peek()); //30
+console.log(stack.pop()); //30
+console.log(stack.peek()); //20
+
+console.log(stack.size());//2
+stack.clear();// {}
+console.log(stack.isEmpty());//true

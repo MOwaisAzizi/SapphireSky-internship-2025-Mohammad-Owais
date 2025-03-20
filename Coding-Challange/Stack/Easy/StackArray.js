@@ -53,5 +53,21 @@ class StackArray {
   }
 }
 
-module.exports = StackArray
+const stack = new StackList();
+    // Test pushing elements
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+
+    // Test peek
+    console.log(stack.peek()); //30
+
+    // Test popping elements
+    console.log(stack.pop()); //30
+    console.log(stack.peek()); //20
+    console.log(stack.sizeOfList());//2
+
+    // Test clearing the stack 
+    stack.clear();//[]
+    console.log(stack.isEmpty());//true
 

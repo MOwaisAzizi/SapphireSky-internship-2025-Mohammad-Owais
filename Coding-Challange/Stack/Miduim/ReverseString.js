@@ -15,4 +15,5 @@ function reverseString(str) {
     return reversedString;
 }
 
-module.exports = reverseString
+console.log(reverseString('Hello'));
+console.log(reverseString('welcome'));
