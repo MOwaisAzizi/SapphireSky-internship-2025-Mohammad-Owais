@@ -1,5 +1,5 @@
-const LinkedList = require('./LinkedList');
-const Node = require('./Node')
+const LinkedList = require('../linkedList');
+const Node = require('../Node')
 
 //9-Write a function to merge two sorted linked lists.
 function mergeSortedLists(list1, list2) {

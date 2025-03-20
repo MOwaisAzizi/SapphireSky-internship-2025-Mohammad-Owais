@@ -1,4 +1,4 @@
-const LinkedList = require("./LinkedList");
+const LinkedList = require("../linkedList");
 
 //15-Write a function to add two numbers represented as linked lists.
 function sumLinkedLists(list1, list2) {
@@ -23,7 +23,7 @@ function sumLinkedLists(list1, list2) {
 
         carry = Math.floor(sum / 10);
         let reminder = sum % 10;
-        newList.addLast(reminder);
+        newList.addLast(reminder)
     }
 
     return newList;

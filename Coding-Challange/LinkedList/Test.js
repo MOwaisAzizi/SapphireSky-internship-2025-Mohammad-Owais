@@ -1,7 +1,7 @@
-const mergeSortedLists = require('./mergeSortedLists');
-const isTwoListsIntersects = require('./isTwoListsIntersects')
-const addLinkedLists = require('./sumLinkedLists')
-const LinkedList = require('./LinkedList');
+const mergeSortedLists = require('./Medium/mergeSortedLists');
+const isTwoListsIntersects = require('./Hard/isTwoListsIntersects')
+const sumLinkedLists = require('./Hard/sumLinkedLists')
+const LinkedList = require('./linkedList');
 
 const list = new LinkedList();
 
@@ -15,7 +15,7 @@ list.addFirst(1);
 // Test deleteFirst
 function testDeleteFirst() {
   console.log('Test deleteFirst');
-  const deletedNode = list.deleteFrist();
+  const deletedNode = list.deleteFirst();
   console.log(`Deleted Node : ${deletedNode.data}`);
 }
 // testDeleteFirst()
@@ -82,7 +82,6 @@ function testGroupOddEven() {
 
 // Test mergeSortedLists
 function testMergeSortedLists() {
-  console.log('Test mergeSortedLists');
   const list1 = new LinkedList();
   const list2 = new LinkedList();
   list1.addFirst(3);
@@ -90,6 +89,13 @@ function testMergeSortedLists() {
   list2.addFirst(6);
   list2.addFirst(2);
 
+  console.log('List 1');
+  list1.display()
+
+  console.log('List 2');
+  list2.display()
+
+  console.log('Test mergeSortedLists');
   const mergedList = mergeSortedLists(list1, list2);
   mergedList.display()
 }
@@ -110,9 +116,9 @@ function testIsTwoListsIntersects() {
 }
 //  testIsTwoListsIntersects()
 
-// Test addLinkedLists
-function testAddLinkedLists() {
-  console.log('Test addLinkedLists');
+// Test sumLinkedLists
+function testsumLinkedLists() {
+  console.log('Test sumLinkedLists');
   const list5 = new LinkedList();
   const list6 = new LinkedList();
   list5.addFirst(5);
@@ -126,8 +132,9 @@ function testAddLinkedLists() {
   console.log('list1');
   list6.display()
 
-  const sumList = addLinkedLists(list5, list6);
+  const sumList = sumLinkedLists(list5, list6);
   console.log('sum of lists');
   sumList.display()
 }
-// testAddLinkedLists()
+
+testsumLinkedLists()
