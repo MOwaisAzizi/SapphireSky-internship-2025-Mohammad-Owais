@@ -12,10 +12,6 @@ class StackArray {
     this.stack[this.top] = element
   }
 
-  testing(){
-    console.log('testing');
-    
-  }
   // Pop element from the stack
   pop() {
     if (this.top === -1) {
@@ -30,44 +26,46 @@ class StackArray {
   // Peek the top element of the stack
   peek() {
     if (this.isEmpty()) {
-      return "Stack is empty";
+      console.log('Stack is Empty');
+
     }
-    console.log('pecking');
 
     return this.stack[this.top];
   }
 
   // Check if the stack is empty
   isEmpty() {
-    return this.stack.length === 0;
+    return this.top === -1
   }
 
   // Get the size of the stack
   size() {
-    return this.stack.length;
+    return this.top + 1
   }
 
   // Clear the stack
   clear() {
     this.stack = [];
+    this.top = -1
   }
 }
+module.exports = StackArray
 
-const stack = new StackList();
-    // Test pushing elements
-    stack.push(10);
-    stack.push(20);
-    stack.push(30);
+//Test
+function testStackArray() {
+  const stack = new StackArray();
+  //test push elements
+  stack.push(10);//10
+  stack.push(20);//20
+  stack.push(30);//30
 
-    // Test peek
-    console.log(stack.peek()); //30
+  //test peek of elements
+  console.log(stack.peek()); //30
+  console.log(stack.pop()); //30
+  console.log(stack.peek()); //20
 
-    // Test popping elements
-    console.log(stack.pop()); //30
-    console.log(stack.peek()); //20
-    console.log(stack.sizeOfList());//2
-
-    // Test clearing the stack 
-    stack.clear();//[]
-    console.log(stack.isEmpty());//true
-
+  console.log(stack.size());//2
+  stack.clear();// {}
+  console.log(stack.isEmpty());//true
+}
+// testStackArray()

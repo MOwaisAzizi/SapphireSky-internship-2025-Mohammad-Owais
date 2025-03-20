@@ -54,18 +54,20 @@ class StackList {
   }
 }
 
+const stack = new StackList();
+    // Test pushing elements
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
 
-const stack = new StackArray();
-//test push elements
-stack.push(10);//10
-stack.push(20);//20
-stack.push(30);//30
+    // Test peek
+    console.log(stack.peek()); //30
 
-//test peek of elements
-console.log(stack.peek()); //30
-console.log(stack.pop()); //30
-console.log(stack.peek()); //20
+    // Test popping elements
+    console.log(stack.pop()); //30
+    console.log(stack.peek()); //20
+    console.log(stack.sizeOfList());//2
 
-console.log(stack.size());//2
-stack.clear();// {}
-console.log(stack.isEmpty());//true
+    // Test clearing the stack 
+    stack.clear();//[]
+    console.log(stack.isEmpty());//true
