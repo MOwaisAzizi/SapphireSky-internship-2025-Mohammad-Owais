@@ -2,25 +2,30 @@ const StackArray = require('./StackArray');
 
 // 5- Write a function to check if a string has balanced parentheses.
 function stringHasBalancedParentheses(str) {
-    
-    const stack = new StackArray();
+    const stackArray = new StackArray();
+    const parentheses = {
+        '(': ')',
+        '[': ']',
+        '{': '}'
+    };
 
     for (let i = 0; i < str.length; i++) {
-        if (str[i] === '(') {
-            stack.push(str[i]);
-        }
+        const char = str[i]; //(
+        if (parentheses[char]) {
+            stackArray.push(char);
+        } 
 
-        else if (str[i] === ')') {
-            if (stack.size() === 0) return false;
-
-            stack.pop();
+        else if (Object.values(parentheses).includes(char)) {
+            if (stackArray.size() === 0 || parentheses[stackArray.peek()] !== char) {
+                return false;
+            }
+            stackArray.pop();
         }
     }
-
-    return stack.size() === 0;
+    return stackArray.size() === 0;
 }
 
-//test parantheses
+//test parentheses
 console.log(stringHasBalancedParentheses('()')); //true
 console.log(stringHasBalancedParentheses('()(')); //false
 console.log(stringHasBalancedParentheses('(abc)')); //true
