@@ -1,7 +1,7 @@
 ////////DATA STRUCTURE
 ////// ARRAY PART
 
-////EASY
+////EASY Part
 
 // 1- Write a function to find the largest element in an array.
 function largestElement(arr) {
@@ -65,7 +65,7 @@ console.log(smallestElement([1, 2, 3, 4, 2, 5]));
 
 ////MIDIUM SECTION
 
-//6 - Write a function to reverse an array without using the built-in reverse() method
+//6 - Write a function to reverse an array without using the built-in reverse() method.
 function reverseArray(arr) {
     let newArray = [];
     for (let i = 0; i < arr.length; i++) {
@@ -148,7 +148,7 @@ console.log(intersectionArrays([2, 3, 84, 5, , 21, 1], [3, 4, 1, 5, 5, 7]));
 
 ////HARD SECTION
 
-//11- who do you remove duplicate elements from an array?
+//11- who do you remove duplicate elements from an array
 function removeDuplicateElements(arr) {
     let uniqueArray = [];
 
