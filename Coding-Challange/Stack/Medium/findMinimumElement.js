@@ -1,4 +1,5 @@
 //9- Implement a function to find the minimum element in a stack in constant time.
+//12- How do you design a stack that supports push(), pop(), and getMin() in constant time?
 
 class Stack {
     constructor() {
@@ -19,7 +20,7 @@ class Stack {
 
     pop() {
         this.stack.pop();
-        this.minStack.pop();
+        // this.minStack.pop();
     }
 
     getMin() {
@@ -30,10 +31,11 @@ class Stack {
 // Test
 const stack = new Stack();
 
-stack.push(3);
+stack.push(1);
 stack.push(2);
 stack.push(1);
 stack.push(4);
+stack.push(0);
 
 console.log(stack.getMin());
 stack.pop();
