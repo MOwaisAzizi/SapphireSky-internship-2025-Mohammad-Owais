@@ -20,7 +20,7 @@ class Stack {
 
     pop() {
         this.stack.pop();
-        // this.minStack.pop();
+        this.minStack.pop();
     }
 
     getMin() {
