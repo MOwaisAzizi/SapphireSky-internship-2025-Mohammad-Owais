@@ -39,7 +39,6 @@ class QueueArray {
     }
 }
 
-
 const queue = new QueueArray()
 queue.enqueue(1)
 queue.enqueue(2)
