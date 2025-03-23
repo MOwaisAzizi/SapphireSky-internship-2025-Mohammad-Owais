@@ -38,6 +38,7 @@ class QueueArray {
         return this.isEmpty() ? null : this.queue[this.front];
     }
 }
+module.exports = QueueArray
 
 const queue = new QueueArray()
 queue.enqueue(1)

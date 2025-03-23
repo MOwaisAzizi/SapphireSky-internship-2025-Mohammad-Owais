@@ -44,6 +44,7 @@ class QueueList {
         return this.front ? this.front.data : null;
     }
 }
+module.exports = QueueList
 
 // Testing
 const queue = new QueueList();
