@@ -1,7 +1,7 @@
 ////////DATA STRUCTURE
 ////// ARRAY PART
 
-////EASY Part
+////EASY
 
 // 1- Write a function to find the largest element in an array.
 function largestElement(arr) {
