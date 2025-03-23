@@ -6,10 +6,10 @@ class StackUsingOneQueue {
 
     push(element) {
         let size = this.queue.length;
-        this.queue.push(element); 
-        
+        this.queue.push(element);
+
         while (size > 0) {
-            this.queue.push(this.queue.shift()); 
+            this.queue.push(this.queue.shift());
             size--;
         }
     }
@@ -19,11 +19,11 @@ class StackUsingOneQueue {
             console.log("Stack is empty!");
             return null;
         }
-        return this.queue.shift(); 
+        return this.queue.shift();
     }
 
     peek() {
-        return this.isEmpty() ? null : this.queue[0]; 
+        return this.isEmpty() ? null : this.queue[0];
     }
 
     isEmpty() {
