@@ -1,4 +1,5 @@
 //7-How do you implement a stack with two queues?
+//two Queue that works like and stack
 class StackUsingQueues {
     constructor() {
         this.queue1 = []; 
@@ -7,12 +8,14 @@ class StackUsingQueues {
 
     push(element) {
         while(this.queue1.length > 0){
+            //insert to last(Enqueue) and delete from front
             this.queue2.push(this.queue1.shift())
         }
 
         this.queue1.push(element)
 
         while(this.queue2.length > 0){
+            //inset at last and delete from front
             this.queue1.push(this.queue2.shift())
         }
     }
