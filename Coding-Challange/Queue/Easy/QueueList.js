@@ -35,6 +35,7 @@ class QueueList {
         return deletedData;
     }
 
+    //5-Write a function to check if a queue is empty.
     isEmpty() {
         return this.front === null;
     }
