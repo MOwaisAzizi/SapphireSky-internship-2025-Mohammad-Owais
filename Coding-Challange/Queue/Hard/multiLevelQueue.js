@@ -21,12 +21,16 @@ class MultiLevelQueue {
         console.log('High Priority');
 
         while (!this.highPriorityQueue.isEmpty()) {
+            this.highPriorityQueue.queue.sort((a, b) => b.priority - a.priority);
+
             const task = this.highPriorityQueue.dequeue()
             console.log(`${task.process} is Running, Priority: ${task.priority}`)
         }
 
         console.log('Low Priority');
         while (!this.lowPriorityQueue.isEmpty()) {
+            this.lowPriorityQueue.queue.sort((a, b) => b.priority - a.priority);
+
             const task = this.lowPriorityQueue.dequeue()
             console.log(`${task.process} is Running, Priority: ${task.priority}`)
         }
@@ -38,7 +42,7 @@ let scheduler = new MultiLevelQueue()
 scheduler.enqueue("Task A", 2)
 scheduler.enqueue("Task B", 3)
 scheduler.enqueue("Task C", 1)
-scheduler.enqueue("Task D", 1)
+scheduler.enqueue("Task D", 0)
 console.log();
 
 scheduler.runScheduler();
