@@ -17,5 +17,6 @@ function firstNonRepeatingCharacter(stream) {
     return queue[0] || 'No Non-Repeating Char'
 }
 
-console.log(firstNonRepeatingCharacter('aabbcc'));
+console.log(firstNonRepeatingCharacter('aabbc'));
+console.log(firstNonRepeatingCharacter('abc'));
 
