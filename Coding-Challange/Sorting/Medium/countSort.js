@@ -1,5 +1,7 @@
 //7-Write a function to perform Counting Sort.
 function countSort(arr) {
+    console.log(arr);
+
     let maxSize = maxEl(arr)
     let countArray = new Array(maxSize + 1).fill(0);
     arr.forEach(element => {
@@ -7,7 +9,6 @@ function countSort(arr) {
     })
 
     let k = 0
-    //[0,2,1,1] 
     for (let i = 0; i < countArray.length; i++) {
         for (let j = 0; j < countArray[i]; j++) {
             arr[k] = i
@@ -23,6 +24,7 @@ function maxEl(arr) {
     }
     return max
 }
+module.exports = countSort
 
 //Testing
 let arr = [1, 6, 1, 5, 2, 4]

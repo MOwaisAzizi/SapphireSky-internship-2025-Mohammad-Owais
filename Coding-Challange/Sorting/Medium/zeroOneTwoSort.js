@@ -2,7 +2,7 @@
 function zeroOneTwoSort(arr) {
     let low = 0, mid = 0, high = arr.length - 1;
 
-    while (mid <= high) {
+    while (mid <= high) {//[1,1,0,2]
         if (arr[mid] === 0) {
             [arr[mid], arr[low]] = [arr[low], arr[mid]];
             low++;
