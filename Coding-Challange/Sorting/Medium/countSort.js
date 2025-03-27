@@ -7,6 +7,7 @@ function countSort(arr) {
     })
 
     let k = 0
+    //[0,2,1,1] 
     for (let i = 0; i < countArray.length; i++) {
         for (let j = 0; j < countArray[i]; j++) {
             arr[k] = i
