@@ -1,5 +1,4 @@
 //7-Implement Quick Sort and explain how pivot selection affects performance.
-
 function sort(arr, start, end) {
     if (start >= end) return;  
     
@@ -24,7 +23,6 @@ function sort(arr, start, end) {
       return boundary + 1;  
   }
   
-
 const array = [15,3,1,22,10,13]
 sort(array,0,5)
 console.log(array);
