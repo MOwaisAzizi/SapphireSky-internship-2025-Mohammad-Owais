@@ -14,7 +14,7 @@ const sortStringByLengthOrder = (stringArr) => {
      }
      return stringArr
 
-    //build in function
+    //build-in function
     // return stringArr.sort((a,b) => a.length - b.length)
 }
 console.log(sortStringByLengthOrder(['book', 'pen', 'phone']));
