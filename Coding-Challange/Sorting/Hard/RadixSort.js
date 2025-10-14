@@ -1,52 +1,42 @@
-class AdvancedRadixSort {
-    static sort(arr) {
-        if (arr.length === 0) return arr;
-        
-        const maxNum = Math.max(...arr);
-        const maxDigits = Math.floor(Math.log10(maxNum)) + 1;
-        
-        for (let digit = 0; digit < maxDigits; digit++) {
-            arr = this.countingSortForDigit(arr, digit);
-        }
-        
-        return arr;
+
+const findMaxDigits = (arr) => {
+    let max = arr[0]
+    for(let number of arr){
+        if(number > max) max = number
     }
-    
-    static countingSortForDigit(arr, digit) {
-        const count = new Array(10).fill(0);
-        const output = new Array(arr.length);
-        
-        // شمارش فراوانی هر رقم
-        for (let i = 0; i < arr.length; i++) {
-            const digitVal = this.getDigit(arr[i], digit);
-            count[digitVal]++;
-        }
-        
-        console.log(`فراوانی ارقام در مرحله ${digit}:`, count);
-        
-        // تبدیل به موقعیت‌های تجمعی
-        for (let i = 1; i < 10; i++) {
-            count[i] += count[i - 1];
-        }
-        
-        console.log(`موقعیت‌های تجمعی:`, count);
-        
-        // قرار دادن اعداد در موقعیت صحیح (از انتها برای پایداری)
-        for (let i = arr.length - 1; i >= 0; i--) {
-            const digitVal = this.getDigit(arr[i], digit);
-            output[count[digitVal] - 1] = arr[i];
-            count[digitVal]--;
-        }
-        
-        return output;
-    }
-    
-    static getDigit(num, place) {
-        return Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;
-    }
+    const numberOfDigits = Math.floor(Math.log10(max)) + 1;
+    return numberOfDigits
 }
 
-// تست
-const testArray = [123, 45, 7, 891, 23, 4567, 89, 1, 234];
-console.log("آرایه اصلی:", testArray);
-console.log("مرتب شده:", AdvancedRadixSort.sort([...testArray]));
+const getDigit = (num, position) => {
+    return Math.floor(Math.abs(num) / Math.pow(10, position)) % 10;
+}
+
+sortArrayBySingleDigit = (arr, digitPosition) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      const currentDigit = getDigit(arr[i], digitPosition);
+      const compareDigit = getDigit(arr[j], digitPosition);
+
+      if (currentDigit > compareDigit) {
+        const temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  return arr;
+};
+
+
+function radixSort(arr){
+    const maxLength = findMaxDigits(arr);
+    
+    for(let i = 0; i < maxLength; i++){
+        arr = sortArrayBySingleDigit(arr, i);
+    }
+    return arr;
+}
+
+console.log(radixSort([23,8,222, 41, 78, 131]));
+console.log(radixSort([2,5,1,7]));
