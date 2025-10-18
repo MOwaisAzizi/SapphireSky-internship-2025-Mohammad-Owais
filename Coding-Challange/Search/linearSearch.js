@@ -1,4 +1,4 @@
-//2- Implement Linear Search on an array.
+//1- Implement Linear Search on an array.
 const linearSearch = (arr, target) => {
     for (let i = 0; i < arr.length; i++) {
         if(arr[i] === target) return i
