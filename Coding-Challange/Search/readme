@@ -1,0 +1,6 @@
+3- What is the time complexity of Binary Search?
+
+---answer---
+best case: O(1)
+average case: Olong(n)
+worst case: Olong(n)
