@@ -1,5 +1,4 @@
 // 2- Implement Binary Search on a sorted array.
-
 const binarySearch = (arr, target) => {
     let left = 0;
     let right = arr.length - 1;

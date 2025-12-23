@@ -13,7 +13,7 @@ class QueueArray {
         }
         this.rear++;
         this.queue[this.rear] = element;
-        this._size ++
+        this._size++
     }
 
     dequeue() {
@@ -29,7 +29,7 @@ class QueueArray {
             this.front = this.rear = -1;
         }
 
-        this._size --
+        this._size--
         return deletedElement;
     }
 
@@ -45,11 +45,10 @@ class QueueArray {
         return this.isEmpty() ? null : this.queue[this.rear];
     }
 
-    size(){
+    size() {
         return this._size
     }
 
-    //this method will be used in the MinQueue file
     pop() {
         if (!this.isEmpty()) {
             this.queue.pop();
@@ -60,7 +59,7 @@ class QueueArray {
             }
         }
     }
-    
+
 
 }
 module.exports = QueueArray
