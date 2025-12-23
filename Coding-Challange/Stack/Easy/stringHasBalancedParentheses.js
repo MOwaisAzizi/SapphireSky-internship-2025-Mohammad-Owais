@@ -9,14 +9,15 @@ function stringHasBalancedParentheses(str) {
         '{': '}'
     };
 
-    for (let i = 0; i < str.length; i++) {'()'
+    for (let i = 0; i < str.length; i++) {
+        '()'
         const char = str[i];
         // console.log(char);
         // console.log(parentheses[char]);
-        
+
         if (parentheses[char]) {
             stackArray.push(char);
-        } 
+        }
 
         else if (Object.values(parentheses).includes(char)) { // ( === )
             if (stackArray.size() === 0 || parentheses[stackArray.peek()] !== char) {

@@ -1,12 +1,11 @@
 //12-Implement an LRU (Least Recently Used) cache using a stack.
-
 class LRUCache {
     constructor(capacity) {
         this.capacity = capacity;
         this.stack = [];
         this.map = new Map();
     }
-    
+
     put(key, value) {
         if (this.map.has(key)) {
             this.removeKey(key);
@@ -14,21 +13,21 @@ class LRUCache {
             let leastRecentlyUsed = this.stack.shift();
             this.map.delete(leastRecentlyUsed);
         }
-        
+
         this.stack.push(key);
         this.map.set(key, value);
     }
-    
-        get(key) {
-            if (!this.map.has(key)) {
-                return -1;
-            }
-    
-            let value = this.map.get(key);
-    
-            this.moveToTop(key, value);
-            return value;
+
+    get(key) {
+        if (!this.map.has(key)) {
+            return -1;
         }
+
+        let value = this.map.get(key);
+
+        this.moveToTop(key, value);
+        return value;
+    }
 
     moveToTop(key, value) {
         this.removeKey(key);

@@ -13,7 +13,7 @@ function insertionSort(bucket) {
 
 function bucketSort(arr) {
     let n = arr.length;
-    let buckets = Array.from({length: n}, () => []);
+    let buckets = Array.from({ length: n }, () => []);
 
     for (let i = 0; i < n; i++) {
         let bi = Math.floor(n * arr[i]);
