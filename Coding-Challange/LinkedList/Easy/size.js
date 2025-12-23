@@ -1,4 +1,3 @@
-
 //5-Implement a program to find the length of a linked list.
 function size(first) {
     let count = 0;
