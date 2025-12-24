@@ -26,7 +26,6 @@ function isTwoListsIntersects(list1, list2) {
         current1 = current1.next;
         current2 = current2.next;
     }
-
     return false;
 }
 

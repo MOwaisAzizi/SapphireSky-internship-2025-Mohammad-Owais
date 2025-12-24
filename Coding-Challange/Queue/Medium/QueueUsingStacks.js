@@ -9,7 +9,7 @@ class QueueUsingStacks {
         while (this.stack1.length > 0) {
             this.stack2.push(this.stack1.pop());
         }
-        
+
         this.stack1.push(value);
 
         while (this.stack2.length > 0) {

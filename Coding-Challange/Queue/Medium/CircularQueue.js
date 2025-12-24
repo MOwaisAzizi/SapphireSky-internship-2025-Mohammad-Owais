@@ -48,10 +48,10 @@ circularQueue.enqueue(10);
 circularQueue.enqueue(20);
 circularQueue.enqueue(30);
 circularQueue.enqueue(40);
-circularQueue.enqueue(50); 
+circularQueue.enqueue(50);
 console.log(circularQueue.queue);
 
 circularQueue.dequeue();
-circularQueue.enqueue(60); 
+circularQueue.enqueue(60);
 console.log(circularQueue.queue);
 
