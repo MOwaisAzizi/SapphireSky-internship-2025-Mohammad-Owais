@@ -67,7 +67,7 @@ console.log(factorial(4));
 
 //8-Find the GCD of Two Numbers
 function findGCD(a, b) {
-    if (a < b) [a,b] = [b,a]
+    if (a < b) [a, b] = [b, a]
 
     while (b !== 0) {
         let temp = b
@@ -83,7 +83,7 @@ function findFibonacci(number) {
     let temp = 0
     let a = 0
     let b = 1
-    for (let i = 1; i < number-1; i++) {
+    for (let i = 1; i < number - 1; i++) {
         temp = a + b
         a = b
         b = temp
