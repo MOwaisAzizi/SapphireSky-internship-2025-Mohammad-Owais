@@ -17,12 +17,12 @@ console.log(odddOrEvenCheck(17));
 // 60-69: D
 // Below 60: F
 function checkStudentGrade(grade) {
-    if(grade < 0 || grade > 100) return
+    if (grade < 0 || grade > 100) return
     else if (grade > 90) return 'A'
     else if (grade >= 80) return 'B'
     else if (grade >= 70) return 'C'
     else if (grade >= 60) return 'D'
-    else if (grade <= 60 ) return 'F'
+    else if (grade <= 60) return 'F'
     else return 'Not Valid Grade.please write a grade more then or equals 0 and less then or equals to 100!'
 }
 console.log(checkStudentGrade(95));

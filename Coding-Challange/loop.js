@@ -1,9 +1,5 @@
-//1-Print Numbers from 1 to 100
-for (let i = 1; i <= 100; i++) {
-    console.log(i);
-}
 
-//2-Sum of First N Natural Numbers
+//1-Sum of First N Natural Numbers
 function sumOfNumber(number) {
     let sum = 0
     for (let i = 1; i <= number; i++) {
@@ -13,7 +9,7 @@ function sumOfNumber(number) {
     ////or 
     // return ((number+1)*number)/2
 }
- console.log(sumOfNumber(5));
+console.log(sumOfNumber(5));
 
 //3-Ask the user for a number and print its multiplication table up to 10.
 function multiplicationTable(number) {
@@ -33,8 +29,7 @@ function reverseNumber(number) {
     }
     return Number(reverseNumber)
 }
-
-// console.log(reverseNumber(123));
+console.log(reverseNumber(123));
 
 //5- Count Digits in a Number
 function countDigit(number) {
@@ -79,7 +74,7 @@ function findSmallAndLargeNumber(arr) {
         if (arr[i] > large) large = arr[i]
         if (arr[i] < small) small = arr[i]
     }
-    return [small,large]
+    return [small, large]
 
 }
 console.log(findSmallAndLargeNumber([2, 3, 4, 5, 1, 4, 33, 1]))
@@ -88,7 +83,7 @@ console.log(findSmallAndLargeNumber([2, 3, 4, 5, 1, 4, 33, 1]))
 function fibonacciSequence(n) {
     let a = 0, b = 1;
     for (let i = 0; i < n; i++) {
-        console.log(a); 
+        console.log(a);
         [a, b] = [b, a + b];
     }
 }
@@ -153,7 +148,7 @@ console.log(collatzSequence(3));
 
 //13-Find GCD (Greatest Common Divisor)
 function GCDChecker(a, b) {
-    if (a < b) [a,b] = [b,a]
+    if (a < b) [a, b] = [b, a]
 
     while (b !== 0) {
         let temp = b
@@ -169,20 +164,20 @@ console.log(GCDChecker(60, 72));
 //   ***  
 //  *****  
 // *******  
- function startTrianglePattern(n){
+function startTrianglePattern(n) {
     for (let i = 1; i < n; i++) {
         let stars = ''
 
-        for (let s = i; s < n-1; s++){
+        for (let s = i; s < n - 1; s++) {
             stars += ' '
         }
-    
+
         for (let j = 1; j <= i; j++) {
             i === j ? stars += '*' : stars += '**'
         }
         console.log(stars);
     }
- }
+}
 startTrianglePattern(10)
 
 //15. Number Guessing Game

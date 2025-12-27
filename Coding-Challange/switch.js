@@ -112,26 +112,26 @@ console.log(gradeSystem(80));
 //7-Currency Converter
 // Take a currency code ("USD", "EUR", "INR", "JPY").
 // Use switch to print the conversion rate relative to a base currency (e.g., USD).
-function currencyConverter(currency){
+function currencyConverter(currency) {
     let rate
-    if(typeof currency !== 'string') return 'Plese Enter a String!'
-    switch(currency){
-        case 'EUR' : rate =  0.85
-        break
-        case 'INR' : rate = 0.5
-        break
-        case 'JPY' : rate = 0.3
-        break
-        case 'USD' :  rate = 1
-        break
-        default : 'Not Valid Currency!'
+    if (typeof currency !== 'string') return 'Plese Enter a String!'
+    switch (currency) {
+        case 'EUR': rate = 0.85
+            break
+        case 'INR': rate = 0.5
+            break
+        case 'JPY': rate = 0.3
+            break
+        case 'USD': rate = 1
+            break
+        default: 'Not Valid Currency!'
     }
     return rate
 }
-  console.log(currencyConverter('EUR'));
+console.log(currencyConverter('EUR'));
 
 
-  //8-Menu-Based ATM System
+//8-Menu-Based ATM System
 // Display a menu with options:
 // 1 → Check Balance
 // 2 → Withdraw Money
@@ -139,20 +139,20 @@ function currencyConverter(currency){
 // 4 → Exit
 // Use switch to perform the correct action based on the user’s choice.
 
-function ATMSystem(key){
-    if(typeof key !== 'number') return 'Falid. We Expected a Number!'
+function ATMSystem(key) {
+    if (typeof key !== 'number') return 'Falid. We Expected a Number!'
     let option = ''
     switch (key) {
-            case 1: option = 'Check Balance'
+        case 1: option = 'Check Balance'
             break;
-            case 2: option = 'withdraw money'
+        case 2: option = 'withdraw money'
             break;
-            case 3: option = 'deposit money'
+        case 3: option = 'deposit money'
             break;
-            case 4: option = 'exit'
+        case 4: option = 'exit'
             break;
-            default: 'Not Valid input!'
+        default: 'Not Valid input!'
     }
     return option
 }
-      console.log(ATMSystem(2));
+console.log(ATMSystem(2));
