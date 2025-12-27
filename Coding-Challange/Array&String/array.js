@@ -1,7 +1,3 @@
-////////DATA STRUCTURE
-////// ARRAY PART
-
-////EASY Part
 
 // 1- Write a function to find the largest element in an array.
 function largestElement(arr) {
@@ -11,6 +7,7 @@ function largestElement(arr) {
     }
     return max
 }
+
 console.log(largestElement([1, 2, 3, 6, 3, 2]));
 
 
@@ -31,10 +28,8 @@ function isInArray(arr, element) {
         if (arr[i] === element) return true
     }
     return false
-    //SECOND WAY
-    // const isElementInArray = arr.includes(element)
-    // return isElementInArray
 }
+
 console.log(isInArray([3, 4, 5, 6], 3));
 
 
@@ -153,11 +148,11 @@ function removeDuplicateElements(arr) {
     let uniqueArray = [];
 
     for (let i = 0; i < arr.length; i++) {
-        let isDuplicate = false; 
+        let isDuplicate = false;
 
         for (let j = 0; j < uniqueArray.length; j++) {
             if (arr[i] === uniqueArray[j]) {
-                isDuplicate = true; 
+                isDuplicate = true;
                 break;
             }
         }
@@ -182,24 +177,24 @@ function findMissingNumbers(arr) {
         if (arr[i] > max) max = arr[i]
         sumOfArray += arr[i]
     }
-    
+
     let sumOfOneToN = 0
     for (let i = 1; i <= max; i++) {
-      sumOfOneToN += i   
+        sumOfOneToN += i
     }
 
     const missingNumber = sumOfOneToN - sumOfArray
 
     return missingNumber
- }
-console.log(findMissingNumbers([1,3,2,5,6]));
+}
+console.log(findMissingNumbers([1, 3, 2, 5, 6]));
 
 
 
 //13- who do you check if two arrays are equal
 function areArraysEqual(arr1, arr2) {
     if (arr1.length !== arr2.length) return false
-    
+
     arr1.sort()
     arr2.sort()
 
@@ -208,27 +203,27 @@ function areArraysEqual(arr1, arr2) {
     }
     return true
 }
-console.log(areArraysEqual([1, 2, 3], [2,1,3]));
+console.log(areArraysEqual([1, 2, 3], [2, 1, 3]));
 
 
 
 //14- implement a function to find the subarray with the maximum sum(Kadane's Algorithm)
- function maxSubarraySum(arr) {
+function maxSubarraySum(arr) {
     let maxSum = -Infinity;
     let currentSum = 0;
 
     for (let num of arr) {
         currentSum += num;
         maxSum = Math.max(maxSum, currentSum);
-        
+
         if (currentSum < 0) {
             currentSum = 0;
         }
     }
     return maxSum;
 }
-console.log(maxSubarraySum([-2, 1, -3, 4, -1, 2, 1, -5, 4])); 
- 
+console.log(maxSubarraySum([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+
 
 
 
