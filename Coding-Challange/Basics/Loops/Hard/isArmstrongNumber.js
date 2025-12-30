@@ -1,4 +1,4 @@
-
+//11-Armstrong Number  Example: 153 = (1³ + 5³ + 3³) = 153
 function isArmstrongNumber(number) {
     let sum = 0
     const numberToArray = String(number).split('')

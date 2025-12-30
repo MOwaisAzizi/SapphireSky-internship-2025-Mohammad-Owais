@@ -1,4 +1,3 @@
-
 //2-Given a student's score (0-100), determine their letter grade based on the following scale:
 // 90-100: A
 // 80-89: B

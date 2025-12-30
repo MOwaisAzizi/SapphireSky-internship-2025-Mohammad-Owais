@@ -1,5 +1,5 @@
 //5-Check for Vowel or Consonant
-function checkVowelConsonant(leter) {
+function checkVowel(leter) {
     if (typeof leter !== 'string') return 'Please Enter a String!'
     leter = leter.toLocaleLowerCase()
 
@@ -8,4 +8,4 @@ function checkVowelConsonant(leter) {
         default: return 'Consonant Leter'
     }
 }
-console.log(checkVowelConsonant('a'))
+console.log(checkVowel('a'))

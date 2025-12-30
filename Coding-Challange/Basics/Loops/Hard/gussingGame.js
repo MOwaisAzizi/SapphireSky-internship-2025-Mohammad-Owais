@@ -12,7 +12,7 @@ function GuessingGame() {
 
         if (isNaN(number)) console.log('Please enter a number!');
 
-        if (number > randomNumber) console.log('to high. Guess Lower!');
+        else if (number > randomNumber) console.log('to high. Guess Lower!');
         else if (number < randomNumber) console.log('to Low. Guess Higher!');
     }
     console.log(`Congrates 🎁. You Guessed Right : ${randomNumber}`);

@@ -11,6 +11,7 @@ function withdrawFromATM(withdrawAmount) {
         balance = balance - withdrawAmount
         console.log(`Your widthdraw was successfull ${withdrawAmount}! Your current balance is ${balance}`);
     }
-    else if (withdrawAmount % 10 !== 0) console.log('Failed: your withdraw amount is not dividible by 10');
+    else
+        console.log('Failed: your withdraw amount is not dividible by 10');
 }
 withdrawFromATM(100)

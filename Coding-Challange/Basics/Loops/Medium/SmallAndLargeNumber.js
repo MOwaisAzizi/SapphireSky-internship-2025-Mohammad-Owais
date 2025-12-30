@@ -6,7 +6,7 @@ function findSmallAndLargeNumber(arr) {
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > large) large = arr[i]
-        if (arr[i] < small) small = arr[i]
+        else if (arr[i] < small) small = arr[i]
     }
     return [small, large]
 

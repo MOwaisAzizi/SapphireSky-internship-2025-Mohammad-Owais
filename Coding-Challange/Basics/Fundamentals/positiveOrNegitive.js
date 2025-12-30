@@ -2,7 +2,7 @@
 function checkPositiveOrNegative(number) {
     if (number > 0) return true
     else if (number < 0) return false
-    else if (number === 0) return `${number} is Zero!`
+    return 0
 }
 
 const input = prompt('Enter A Number')

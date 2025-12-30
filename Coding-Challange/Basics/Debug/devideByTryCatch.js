@@ -13,4 +13,5 @@ function divide(a, b) {
         console.error("Error caught:", error.message);
     }
 }
+
 console.log(divide(10, 0)); 

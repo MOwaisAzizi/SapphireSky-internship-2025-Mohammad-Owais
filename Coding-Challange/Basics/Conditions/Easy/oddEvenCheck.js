@@ -2,7 +2,7 @@
 function oddOrEvenCheck(number) {
     if (number === 0) return `${number} is zero!`
     else if (number % 2 === 0) return `${number} is even!`
-    else if (number % 2 !== 0) return `${number} is odd!`
+    return `${number} is odd!`
 }
 
 console.log(odddOrEvenCheck(17));
