@@ -6,3 +6,4 @@ function isRotate(str1, str2) {
     return mergedStrings.includes(str2);
 }
 console.log(isRotate('water', 'erwat'));
+console.log(isRotate('owo', 'woo'));
