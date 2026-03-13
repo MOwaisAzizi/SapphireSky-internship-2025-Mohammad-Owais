@@ -2,6 +2,7 @@
 function longestPalindrome(str) {
     if (!str || str.length < 1) return "";
     let start = 0, end = 0;
+
     function expandAroundCenter(left, right) {
         while (left >= 0 && right < str.length && str[left] === str[right]) {
             left--;
@@ -9,6 +10,7 @@ function longestPalindrome(str) {
         }
         return right - left - 1;
     }
+    
     for (let i = 0; i < str.length; i++) {
         let len1 = expandAroundCenter(i, i);
         let len2 = expandAroundCenter(i, i + 1);

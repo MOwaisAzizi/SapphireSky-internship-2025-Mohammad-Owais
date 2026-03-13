@@ -1,5 +1,4 @@
 //9-Implement a circular queue and explain how it works.
-
 // A circular queue is a linear data structure that follows the FIFO (First In, First Out) 
 // principle but connects the end of the queue back to the beginning, forming a circle.
 //  This makes it more efficient in terms of space compared to a regular queue, 

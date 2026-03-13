@@ -20,3 +20,4 @@ function findFirstNonRepeatCharacter(str) {
 }
 
 console.log(findFirstNonRepeatCharacter('HelloobHe'));
+console.log(findFirstNonRepeatCharacter('HeloobHe'));
